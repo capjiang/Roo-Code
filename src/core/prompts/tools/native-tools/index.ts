@@ -11,7 +11,6 @@ import fetchInstructions from "./fetch_instructions"
 import generateImage from "./generate_image"
 import listCodeDefinitionNames from "./list_code_definition_names"
 import listFiles from "./list_files"
-import securityAudit from "./security_audit"
 import newTask from "./new_task"
 import { createReadFileTool } from "./read_file"
 import runSlashCommand from "./run_slash_command"
@@ -45,7 +44,6 @@ export function getNativeTools(partialReadsEnabled: boolean = true): OpenAI.Chat
 		generateImage,
 		listCodeDefinitionNames,
 		listFiles,
-		securityAudit,
 		newTask,
 		createReadFileTool(partialReadsEnabled),
 		runSlashCommand,

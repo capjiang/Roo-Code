@@ -25,7 +25,6 @@ import { getCodebaseSearchDescription } from "./codebase-search"
 import { getUpdateTodoListDescription } from "./update-todo-list"
 import { getRunSlashCommandDescription } from "./run-slash-command"
 import { getGenerateImageDescription } from "./generate-image"
-import { getSecurityAuditDescription } from "./security-audit"
 import { CodeIndexManager } from "../../../services/code-index/manager"
 
 // Map of tool names to their description functions
@@ -57,7 +56,6 @@ const toolDescriptionMap: Record<string, (args: ToolArgs) => string | undefined>
 	update_todo_list: (args) => getUpdateTodoListDescription(args),
 	run_slash_command: () => getRunSlashCommandDescription(),
 	generate_image: (args) => getGenerateImageDescription(args),
-	security_audit: (args) => getSecurityAuditDescription(args),
 }
 
 export function getToolDescriptionsForMode(
@@ -178,7 +176,6 @@ export {
 	getCodebaseSearchDescription,
 	getRunSlashCommandDescription,
 	getGenerateImageDescription,
-	getSecurityAuditDescription,
 }
 
 // Export native tool definitions (JSON schema format for OpenAI-compatible APIs)

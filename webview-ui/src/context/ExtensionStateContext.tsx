@@ -114,10 +114,8 @@ export interface ExtensionStateContextType extends ExtensionState {
 	setAlwaysApproveResubmit: (value: boolean) => void
 	requestDelaySeconds: number
 	setRequestDelaySeconds: (value: number) => void
-	securityAuditEnabled?: boolean
-	setSecurityAuditEnabled: (value: boolean) => void
-	alwaysAllowSecurityAudit?: boolean
-	setAlwaysAllowSecurityAudit: (value: boolean) => void
+	securityAuditOnCompletionEnabled: boolean
+	setSecurityAuditOnCompletionEnabled: (value: boolean) => void
 	setCurrentApiConfigName: (value: string) => void
 	setListApiConfigMeta: (value: ProviderSettingsEntry[]) => void
 	mode: Mode
@@ -236,8 +234,7 @@ export const ExtensionStateContextProvider: React.FC<{ children: React.ReactNode
 		customCondensingPrompt: "", // Default empty string for custom condensing prompt
 		hasOpenedModeSelector: false, // Default to false (not opened yet)
 		autoApprovalEnabled: false,
-		securityAuditEnabled: true,
-		alwaysAllowSecurityAudit: true,
+		securityAuditOnCompletionEnabled: false,
 		customModes: [],
 		maxOpenTabsContext: 20,
 		maxWorkspaceFiles: 200,
@@ -478,8 +475,7 @@ export const ExtensionStateContextProvider: React.FC<{ children: React.ReactNode
 		marketplaceItems,
 		marketplaceInstalledMetadata,
 		profileThresholds: state.profileThresholds ?? {},
-		securityAuditEnabled: state.securityAuditEnabled ?? true,
-		alwaysAllowSecurityAudit: state.alwaysAllowSecurityAudit ?? true,
+		securityAuditOnCompletionEnabled: state.securityAuditOnCompletionEnabled ?? false,
 		alwaysAllowFollowupQuestions,
 		followupAutoApproveTimeoutMs,
 		remoteControlEnabled: state.remoteControlEnabled ?? false,
@@ -500,9 +496,8 @@ export const ExtensionStateContextProvider: React.FC<{ children: React.ReactNode
 		setAlwaysAllowMcp: (value) => setState((prevState) => ({ ...prevState, alwaysAllowMcp: value })),
 		setAlwaysAllowModeSwitch: (value) => setState((prevState) => ({ ...prevState, alwaysAllowModeSwitch: value })),
 		setAlwaysAllowSubtasks: (value) => setState((prevState) => ({ ...prevState, alwaysAllowSubtasks: value })),
-		setSecurityAuditEnabled: (value) => setState((prevState) => ({ ...prevState, securityAuditEnabled: value })),
-		setAlwaysAllowSecurityAudit: (value) =>
-			setState((prevState) => ({ ...prevState, alwaysAllowSecurityAudit: value })),
+		setSecurityAuditOnCompletionEnabled: (value) =>
+			setState((prevState) => ({ ...prevState, securityAuditOnCompletionEnabled: value })),
 		setAlwaysAllowFollowupQuestions,
 		setFollowupAutoApproveTimeoutMs: (value) =>
 			setState((prevState) => ({ ...prevState, followupAutoApproveTimeoutMs: value })),

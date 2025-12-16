@@ -67,8 +67,7 @@ export const globalSettingsSchema = z.object({
 	customCondensingPrompt: z.string().optional(),
 
 	autoApprovalEnabled: z.boolean().optional(),
-	securityAuditEnabled: z.boolean().optional(),
-	alwaysAllowSecurityAudit: z.boolean().optional(),
+	securityAuditOnCompletionEnabled: z.boolean().optional(),
 	alwaysAllowReadOnly: z.boolean().optional(),
 	alwaysAllowReadOnlyOutsideWorkspace: z.boolean().optional(),
 	alwaysAllowWrite: z.boolean().optional(),
@@ -296,8 +295,7 @@ export const EVALS_SETTINGS: RooCodeSettings = {
 	pinnedApiConfigs: {},
 
 	autoApprovalEnabled: true,
-	securityAuditEnabled: true,
-	alwaysAllowSecurityAudit: true,
+	securityAuditOnCompletionEnabled: false,
 	alwaysAllowReadOnly: true,
 	alwaysAllowReadOnlyOutsideWorkspace: false,
 	alwaysAllowWrite: true,

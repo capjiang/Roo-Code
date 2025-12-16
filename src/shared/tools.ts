@@ -75,7 +75,6 @@ export const toolParamNames = [
 	"file_path", // search_replace parameter
 	"old_string", // search_replace parameter
 	"new_string", // search_replace parameter
-	"target", // security_audit parameter
 ] as const
 
 export type ToolParamName = (typeof toolParamNames)[number]
@@ -95,7 +94,6 @@ export type NativeToolArgs = {
 	search_and_replace: { path: string; operations: Array<{ search: string; replace: string }> }
 	search_replace: { file_path: string; old_string: string; new_string: string }
 	apply_patch: { patch: string }
-	security_audit: { target: string }
 	ask_followup_question: {
 		question: string
 		follow_up: Array<{ text: string; mode?: string }>
@@ -266,7 +264,6 @@ export const TOOL_DISPLAY_NAMES: Record<ToolName, string> = {
 	update_todo_list: "update todo list",
 	run_slash_command: "run slash command",
 	generate_image: "generate images",
-	security_audit: "security audit",
 } as const
 
 // Define available tool groups.
@@ -279,7 +276,6 @@ export const TOOL_GROUPS: Record<ToolGroup, ToolGroupConfig> = {
 			"list_files",
 			"list_code_definition_names",
 			"codebase_search",
-			"security_audit",
 		],
 	},
 	edit: {

@@ -202,8 +202,6 @@ const SettingsView = forwardRef<SettingsViewRef, SettingsViewProps>(({ onDone, t
 		profileThresholds,
 		alwaysAllowFollowupQuestions,
 		alwaysAllowUpdateTodoList,
-		securityAuditEnabled,
-		alwaysAllowSecurityAudit,
 		followupAutoApproveTimeoutMs,
 		includeDiagnosticMessages,
 		maxDiagnosticMessages,
@@ -410,8 +408,6 @@ const SettingsView = forwardRef<SettingsViewRef, SettingsViewProps>(({ onDone, t
 					maxDiagnosticMessages: maxDiagnosticMessages ?? 50,
 					alwaysAllowSubtasks,
 					alwaysAllowUpdateTodoList,
-					securityAuditEnabled: securityAuditEnabled ?? true,
-					alwaysAllowSecurityAudit,
 					alwaysAllowFollowupQuestions: alwaysAllowFollowupQuestions ?? false,
 					followupAutoApproveTimeoutMs,
 					condensingApiConfigId: condensingApiConfigId || "",
@@ -729,8 +725,6 @@ const SettingsView = forwardRef<SettingsViewRef, SettingsViewProps>(({ onDone, t
 							alwaysAllowExecute={alwaysAllowExecute}
 							alwaysAllowFollowupQuestions={alwaysAllowFollowupQuestions}
 							alwaysAllowUpdateTodoList={alwaysAllowUpdateTodoList}
-							securityAuditEnabled={securityAuditEnabled}
-							alwaysAllowSecurityAudit={alwaysAllowSecurityAudit}
 							followupAutoApproveTimeoutMs={followupAutoApproveTimeoutMs}
 							allowedCommands={allowedCommands}
 							allowedMaxRequests={allowedMaxRequests ?? undefined}

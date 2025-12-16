@@ -481,14 +481,6 @@ export class NativeToolCallParser {
 				}
 				break
 
-			case "security_audit":
-				if (partialArgs.target !== undefined) {
-					nativeArgs = {
-						target: partialArgs.target,
-					}
-				}
-				break
-
 			case "use_mcp_tool":
 				if (partialArgs.server_name !== undefined || partialArgs.tool_name !== undefined) {
 					nativeArgs = {
@@ -733,14 +725,6 @@ export class NativeToolCallParser {
 						nativeArgs = {
 							path: args.path,
 							content: args.content,
-						} as NativeArgsFor<TName>
-					}
-					break
-
-				case "security_audit":
-					if (args.target) {
-						nativeArgs = {
-							target: args.target,
 						} as NativeArgsFor<TName>
 					}
 					break

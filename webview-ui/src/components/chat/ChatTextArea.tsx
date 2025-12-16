@@ -1,7 +1,7 @@
 import React, { forwardRef, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react"
 import { useEvent } from "react-use"
 import DynamicTextArea from "react-textarea-autosize"
-import { VolumeX, Image, WandSparkles, SendHorizontal, MessageSquareX } from "lucide-react"
+import { VolumeX, Image, WandSparkles, SendHorizontal, MessageSquareX, Shield } from "lucide-react"
 
 import { mentionRegex, mentionRegexGlobal, commandRegexGlobal, unescapeSpaces } from "@roo/context-mentions"
 import { WebviewMessage } from "@roo/WebviewMessage"
@@ -21,7 +21,7 @@ import {
 } from "@src/utils/context-mentions"
 import { cn } from "@src/lib/utils"
 import { convertToMentionPath } from "@src/utils/path-mentions"
-import { StandardTooltip } from "@src/components/ui"
+import { StandardTooltip, ToggleSwitch } from "@src/components/ui"
 
 import Thumbnails from "../common/Thumbnails"
 import { ModeSelector } from "./ModeSelector"
@@ -94,6 +94,8 @@ export const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 			clineMessages,
 			commands,
 			cloudUserInfo,
+			securityAuditOnCompletionEnabled,
+			setSecurityAuditOnCompletionEnabled,
 		} = useExtensionState()
 
 		// Find the ID and display text for the currently selected API configuration.
@@ -110,6 +112,15 @@ export const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 		const [fileSearchResults, setFileSearchResults] = useState<SearchResult[]>([])
 		const [searchLoading, setSearchLoading] = useState(false)
 		const [searchRequestId, setSearchRequestId] = useState<string>("")
+
+		const handleSecurityAuditOnCompletionToggle = useCallback(() => {
+			const newValue = !securityAuditOnCompletionEnabled
+			setSecurityAuditOnCompletionEnabled(newValue)
+			vscode.postMessage({
+				type: "updateSettings",
+				updatedSettings: { securityAuditOnCompletionEnabled: newValue },
+			})
+		}, [securityAuditOnCompletionEnabled, setSecurityAuditOnCompletionEnabled])
 
 		// Close dropdown when clicking outside.
 		useEffect(() => {
@@ -1238,6 +1249,29 @@ export const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 							togglePinnedApiConfig={togglePinnedApiConfig}
 						/>
 						<AutoApproveDropdown triggerClassName="min-w-[28px] text-ellipsis overflow-hidden flex-shrink" />
+						<StandardTooltip content={t("settings:autoApprove.securityAudit.enableDescription")}>
+							<div
+								className={cn(
+									"inline-flex items-center gap-1.5 relative whitespace-nowrap px-1.5 py-1 text-xs",
+									"bg-transparent border border-[rgba(255,255,255,0.08)] rounded-md text-vscode-foreground",
+									"transition-all duration-150 focus-within:outline-none focus-within:ring-1 focus-within:ring-vscode-focusBorder focus-within:ring-inset",
+									"opacity-90 hover:opacity-100 hover:bg-[rgba(255,255,255,0.03)] hover:border-[rgba(255,255,255,0.15)]",
+									"max-[300px]:shrink-0",
+								)}
+								data-testid="security-audit-on-completion-toggle">
+								<Shield className="size-3 flex-shrink-0" />
+								<span className="hidden min-[300px]:inline truncate min-w-0">
+									{t("settings:autoApprove.securityAudit.label")}
+								</span>
+								<div className="flex-grow" />
+								<ToggleSwitch
+									checked={securityAuditOnCompletionEnabled}
+									onChange={handleSecurityAuditOnCompletionToggle}
+									aria-label={t("settings:autoApprove.securityAudit.enableLabel")}
+									data-testid="security-audit-on-completion-switch"
+								/>
+							</div>
+						</StandardTooltip>
 					</div>
 					<div
 						className={cn(

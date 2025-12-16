@@ -7,13 +7,12 @@ import { isWriteToolAction, isReadOnlyToolAction } from "./tools"
 import { isMcpToolAlwaysAllowed } from "./mcp"
 import { getCommandDecision } from "./commands"
 
-// We have 11 different actions that can be auto-approved.
+// We have 10 different actions that can be auto-approved.
 export type AutoApprovalState =
 	| "alwaysAllowReadOnly"
 	| "alwaysAllowWrite"
 	| "alwaysAllowBrowser"
 	| "alwaysApproveResubmit"
-	| "alwaysAllowSecurityAudit"
 	| "alwaysAllowMcp"
 	| "alwaysAllowModeSwitch"
 	| "alwaysAllowSubtasks"
@@ -24,7 +23,6 @@ export type AutoApprovalState =
 // Some of these actions have additional settings associated with them.
 export type AutoApprovalStateOptions =
 	| "autoApprovalEnabled"
-	| "securityAuditEnabled"
 	| "alwaysAllowReadOnlyOutsideWorkspace" // For `alwaysAllowReadOnly`.
 	| "alwaysAllowWriteOutsideWorkspace" // For `alwaysAllowWrite`.
 	| "alwaysAllowWriteProtected"
@@ -143,14 +141,6 @@ export async function checkAutoApproval({
 
 		if (!tool) {
 			return { decision: "ask" }
-		}
-
-		if (tool.tool === "securityAudit") {
-			if (state.securityAuditEnabled === false) {
-				return { decision: "ask" }
-			}
-
-			return state.alwaysAllowSecurityAudit === true ? { decision: "approve" } : { decision: "ask" }
 		}
 
 		if (tool.tool === "updateTodoList") {

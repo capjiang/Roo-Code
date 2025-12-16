@@ -16,7 +16,6 @@ type AutoApproveToggles = Pick<
 	| "alwaysAllowExecute"
 	| "alwaysAllowFollowupQuestions"
 	| "alwaysAllowUpdateTodoList"
-	| "alwaysAllowSecurityAudit"
 >
 
 export type AutoApproveSetting = keyof AutoApproveToggles
@@ -99,13 +98,6 @@ export const autoApproveSettingsConfig: Record<AutoApproveSetting, AutoApproveCo
 		descriptionKey: "settings:autoApprove.updateTodoList.description",
 		icon: "checklist",
 		testId: "always-allow-update-todo-list-toggle",
-	},
-	alwaysAllowSecurityAudit: {
-		key: "alwaysAllowSecurityAudit",
-		labelKey: "settings:autoApprove.securityAudit.label",
-		descriptionKey: "settings:autoApprove.securityAudit.description",
-		icon: "shield",
-		testId: "always-allow-security-audit-toggle",
 	},
 }
 
