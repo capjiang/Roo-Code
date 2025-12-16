@@ -635,6 +635,57 @@ export const ChatRowContent = ({
 						</div>
 					</>
 				)
+			case "securityAudit": {
+				const target = tool.target ?? ""
+				const outputSummary = tool.content ?? ""
+
+				return (
+					<>
+						<div style={headerStyle}>
+							{toolIcon("shield")}
+							<span style={{ fontWeight: "bold" }}>
+								{message.type === "ask"
+									? t("chat:securityAudit.wantsToRun")
+									: t("chat:securityAudit.didRun")}
+							</span>
+						</div>
+						{(target || outputSummary) && (
+							<div className="pl-6">
+								{target && (
+									<ToolUseBlock>
+										<ToolUseBlockHeader
+											className="group"
+											onClick={() => vscode.postMessage({ type: "openFile", text: target })}>
+											<PathTooltip content={formatPathTooltip(target)}>
+												<span className="whitespace-nowrap overflow-hidden text-ellipsis text-left mr-2 rtl">
+													{formatPathTooltip(target)}
+												</span>
+											</PathTooltip>
+											<div style={{ flexGrow: 1 }}></div>
+											<SquareArrowOutUpRight
+												className="w-4 shrink-0 codicon codicon-link-external opacity-0 group-hover:opacity-100 transition-opacity"
+												style={{ fontSize: 13.5, margin: "1px 0" }}
+											/>
+										</ToolUseBlockHeader>
+									</ToolUseBlock>
+								)}
+								{outputSummary && (
+									<div className={target ? "mt-2" : ""}>
+										<CodeAccordian
+											code={outputSummary}
+											language="shell-session"
+											isLoading={message.partial}
+											isExpanded={isExpanded}
+											onToggleExpand={handleToggleExpand}
+											header={t("chat:commandOutput")}
+										/>
+									</div>
+								)}
+							</div>
+						)}
+					</>
+				)
+			}
 			case "fetchInstructions":
 				return (
 					<>
@@ -1455,6 +1506,24 @@ export const ChatRowContent = ({
 							title={title}
 						/>
 					)
+				// case "tool": {
+				// 	const parsed = safeJsonParse<any>(message.text, {})
+				// 	const toolName = parsed?.tool ?? "tool"
+				// 	const detail = parsed?.path || parsed?.target || parsed?.reason || parsed?.message
+
+				// 	return (
+				// 		<div className="flex flex-col gap-2">
+				// 			<div style={headerStyle}>
+				// 				{icon}
+				// 				{title || t("chat:ask.toolApproval", "Tool approval required")}
+				// 			</div>
+				// 			<div className="pl-6 text-sm text-vscode-foreground">
+				// 				<div>{t("chat:ask.toolName", { tool: toolName })}</div>
+				// 				{detail && <div className="text-vscode-descriptionForeground">{String(detail)}</div>}
+				// 			</div>
+				// 		</div>
+				// 	)
+				// }
 				case "use_mcp_server":
 					// Parse the message text to get the MCP server request
 					const messageJson = safeJsonParse<any>(message.text, {})

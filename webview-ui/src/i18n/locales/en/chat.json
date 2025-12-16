@@ -192,6 +192,10 @@
 	"instructions": {
 		"wantsToFetch": "Roo wants to fetch detailed instructions to assist with the current task"
 	},
+	"securityAudit": {
+		"wantsToRun": "Roo wants to run a security audit",
+		"didRun": "Roo ran a security audit"
+	},
 	"fileOperations": {
 		"wantsToRead": "Roo wants to read this file",
 		"wantsToReadMultiple": "Roo wants to read multiple files",

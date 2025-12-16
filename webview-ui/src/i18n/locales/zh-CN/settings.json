@@ -240,6 +240,14 @@
 			"label": "待办",
 			"description": "无需批准即可自动更新待办清单"
 		},
+		"securityAudit": {
+			"label": "安全审计",
+			"description": "允许 Roo 在无需确认的情况下运行安全审计检查。",
+			"enableLabel": "启用安全审计",
+			"enableDescription": "为当前工作区开启内置安全审计。",
+			"autoApproveLabel": "自动批准安全审计",
+			"autoApproveDescription": "无需提示即可自动执行安全审计任务。"
+		},
 		"apiRequestLimit": {
 			"title": "最大请求数",
 			"description": "在请求批准以继续执行任务之前，自动发出此数量的 API 请求。",

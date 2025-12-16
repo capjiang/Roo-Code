@@ -171,6 +171,10 @@
 	"instructions": {
 		"wantsToFetch": "Roo 想要获取详细指示以协助当前任务"
 	},
+	"securityAudit": {
+		"wantsToRun": "Roo 想要运行安全审计",
+		"didRun": "Roo 已运行安全审计"
+	},
 	"fileOperations": {
 		"wantsToRead": "需要读取文件",
 		"wantsToReadOutsideWorkspace": "请求访问外部文件",

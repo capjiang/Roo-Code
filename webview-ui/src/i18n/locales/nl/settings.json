@@ -240,6 +240,14 @@
 			"label": "Todo",
 			"description": "De takenlijst wordt automatisch bijgewerkt zonder goedkeuring"
 		},
+		"securityAudit": {
+			"label": "Security audit",
+			"description": "Allow Roo to run security audit checks without asking for approval.",
+			"enableLabel": "Enable security audit",
+			"enableDescription": "Turn on built-in security auditing for the current workspace.",
+			"autoApproveLabel": "Auto-approve security audit",
+			"autoApproveDescription": "Run security audit tasks automatically without prompting for approval."
+		},
 		"apiRequestLimit": {
 			"title": "Maximale verzoeken",
 			"description": "Voer automatisch dit aantal API-verzoeken uit voordat om goedkeuring wordt gevraagd om door te gaan met de taak.",

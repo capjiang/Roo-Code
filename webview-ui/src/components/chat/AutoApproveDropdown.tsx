@@ -42,6 +42,7 @@ export const AutoApproveDropdown = ({ disabled = false, triggerClassName = "" }:
 		setAlwaysApproveResubmit,
 		setAlwaysAllowFollowupQuestions,
 		setAlwaysAllowUpdateTodoList,
+		setAlwaysAllowSecurityAudit,
 	} = useExtensionState()
 
 	const baseToggles = useAutoApprovalToggles()
@@ -90,6 +91,9 @@ export const AutoApproveDropdown = ({ disabled = false, triggerClassName = "" }:
 				case "alwaysAllowUpdateTodoList":
 					setAlwaysAllowUpdateTodoList(value)
 					break
+				case "alwaysAllowSecurityAudit":
+					setAlwaysAllowSecurityAudit(value)
+					break
 			}
 
 			// If enabling any option, ensure autoApprovalEnabled is true.
@@ -110,6 +114,7 @@ export const AutoApproveDropdown = ({ disabled = false, triggerClassName = "" }:
 			setAlwaysApproveResubmit,
 			setAlwaysAllowFollowupQuestions,
 			setAlwaysAllowUpdateTodoList,
+			setAlwaysAllowSecurityAudit,
 			setAutoApprovalEnabled,
 		],
 	)

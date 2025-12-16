@@ -240,6 +240,14 @@
 			"label": "Todo",
 			"description": "承認なしで自動的にToDoリストを更新"
 		},
+		"securityAudit": {
+			"label": "Security audit",
+			"description": "Allow Roo to run security audit checks without asking for approval.",
+			"enableLabel": "Enable security audit",
+			"enableDescription": "Turn on built-in security auditing for the current workspace.",
+			"autoApproveLabel": "Auto-approve security audit",
+			"autoApproveDescription": "Run security audit tasks automatically without prompting for approval."
+		},
 		"apiRequestLimit": {
 			"title": "最大リクエスト数",
 			"description": "タスクを続行するための承認を求める前に、自動的にこの数のAPIリクエストを行います。",

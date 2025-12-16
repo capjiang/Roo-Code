@@ -32,6 +32,8 @@ type AutoApproveSettingsProps = HTMLAttributes<HTMLDivElement> & {
 	alwaysAllowExecute?: boolean
 	alwaysAllowFollowupQuestions?: boolean
 	alwaysAllowUpdateTodoList?: boolean
+	securityAuditEnabled?: boolean
+	alwaysAllowSecurityAudit?: boolean
 	followupAutoApproveTimeoutMs?: number
 	allowedCommands?: string[]
 	allowedMaxRequests?: number | undefined
@@ -51,6 +53,8 @@ type AutoApproveSettingsProps = HTMLAttributes<HTMLDivElement> & {
 		| "alwaysAllowSubtasks"
 		| "alwaysAllowExecute"
 		| "alwaysAllowFollowupQuestions"
+		| "securityAuditEnabled"
+		| "alwaysAllowSecurityAudit"
 		| "followupAutoApproveTimeoutMs"
 		| "allowedCommands"
 		| "allowedMaxRequests"
@@ -74,6 +78,8 @@ export const AutoApproveSettings = ({
 	alwaysAllowSubtasks,
 	alwaysAllowExecute,
 	alwaysAllowFollowupQuestions,
+	securityAuditEnabled = true,
+	alwaysAllowSecurityAudit = true,
 	followupAutoApproveTimeoutMs = 60000,
 	alwaysAllowUpdateTodoList,
 	allowedCommands,
@@ -171,6 +177,7 @@ export const AutoApproveSettings = ({
 						alwaysAllowExecute={alwaysAllowExecute}
 						alwaysAllowFollowupQuestions={alwaysAllowFollowupQuestions}
 						alwaysAllowUpdateTodoList={alwaysAllowUpdateTodoList}
+						alwaysAllowSecurityAudit={alwaysAllowSecurityAudit}
 						onToggle={(key, value) => setCachedStateField(key, value)}
 					/>
 
@@ -207,6 +214,24 @@ export const AutoApproveSettings = ({
 						</div>
 					</div>
 				)}
+
+				<div className="flex flex-col gap-3 pl-3 border-l-2 border-vscode-button-background">
+					<div className="flex items-center gap-4 font-bold">
+						<span className="codicon codicon-shield" />
+						<div>{t("settings:autoApprove.securityAudit.label")}</div>
+					</div>
+					<div>
+						<VSCodeCheckbox
+							checked={securityAuditEnabled}
+							onChange={(e: any) => setCachedStateField("securityAuditEnabled", e.target.checked)}
+							data-testid="security-audit-enabled-checkbox">
+							<span className="font-medium">{t("settings:autoApprove.securityAudit.enableLabel")}</span>
+						</VSCodeCheckbox>
+						<div className="text-vscode-descriptionForeground text-sm mt-1">
+							{t("settings:autoApprove.securityAudit.enableDescription")}
+						</div>
+					</div>
+				</div>
 
 				{alwaysAllowWrite && (
 					<div className="flex flex-col gap-3 pl-3 border-l-2 border-vscode-button-background">

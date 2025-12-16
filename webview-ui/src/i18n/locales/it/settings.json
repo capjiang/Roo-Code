@@ -240,6 +240,14 @@
 			"label": "Todo",
 			"description": "La lista delle cose da fare viene aggiornata automaticamente senza approvazione"
 		},
+		"securityAudit": {
+			"label": "Security audit",
+			"description": "Allow Roo to run security audit checks without asking for approval.",
+			"enableLabel": "Enable security audit",
+			"enableDescription": "Turn on built-in security auditing for the current workspace.",
+			"autoApproveLabel": "Auto-approve security audit",
+			"autoApproveDescription": "Run security audit tasks automatically without prompting for approval."
+		},
 		"apiRequestLimit": {
 			"title": "Richieste massime",
 			"description": "Esegui automaticamente questo numero di richieste API prima di chiedere l'approvazione per continuare con l'attività.",

@@ -226,6 +226,8 @@ export type ExtensionState = Pick<
 	| "pinnedApiConfigs"
 	| "customInstructions"
 	| "dismissedUpsells"
+	| "securityAuditEnabled"
+	| "alwaysAllowSecurityAudit"
 	| "autoApprovalEnabled"
 	| "alwaysAllowReadOnly"
 	| "alwaysAllowReadOnlyOutsideWorkspace"
@@ -372,6 +374,7 @@ export interface ClineSayTool {
 		| "listFilesRecursive"
 		| "listCodeDefinitionNames"
 		| "searchFiles"
+		| "securityAudit"
 		| "switchMode"
 		| "newTask"
 		| "finishTask"
@@ -382,6 +385,8 @@ export interface ClineSayTool {
 	path?: string
 	diff?: string
 	content?: string
+	// Properties for securityAudit tool
+	target?: string
 	// Unified diff statistics computed by the extension
 	diffStats?: { added: number; removed: number }
 	regex?: string

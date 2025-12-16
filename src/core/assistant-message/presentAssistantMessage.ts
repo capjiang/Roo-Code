@@ -21,6 +21,7 @@ import { applyDiffTool } from "../tools/MultiApplyDiffTool"
 import { searchAndReplaceTool } from "../tools/SearchAndReplaceTool"
 import { searchReplaceTool } from "../tools/SearchReplaceTool"
 import { applyPatchTool } from "../tools/ApplyPatchTool"
+import { securityAuditTool } from "../tools/SecurityAuditTool"
 import { listCodeDefinitionNamesTool } from "../tools/ListCodeDefinitionNamesTool"
 import { searchFilesTool } from "../tools/SearchFilesTool"
 import { browserActionTool } from "../tools/BrowserActionTool"
@@ -852,6 +853,15 @@ export async function presentAssistantMessage(cline: Task) {
 				case "search_replace":
 					await checkpointSaveAndMark(cline)
 					await searchReplaceTool.handle(cline, block as ToolUse<"search_replace">, {
+						askApproval,
+						handleError,
+						pushToolResult,
+						removeClosingTag,
+						toolProtocol,
+					})
+					break
+				case "security_audit":
+					await securityAuditTool.handle(cline, block as ToolUse<"security_audit">, {
 						askApproval,
 						handleError,
 						pushToolResult,

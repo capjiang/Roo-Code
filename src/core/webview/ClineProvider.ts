@@ -2210,6 +2210,8 @@ export class ClineProvider
 			lastShownAnnouncementId: stateValues.lastShownAnnouncementId,
 			customInstructions: stateValues.customInstructions,
 			apiModelId: stateValues.apiModelId,
+			securityAuditEnabled: stateValues.securityAuditEnabled ?? true,
+			alwaysAllowSecurityAudit: stateValues.alwaysAllowSecurityAudit ?? true,
 			alwaysAllowReadOnly: stateValues.alwaysAllowReadOnly ?? false,
 			alwaysAllowReadOnlyOutsideWorkspace: stateValues.alwaysAllowReadOnlyOutsideWorkspace ?? false,
 			alwaysAllowWrite: stateValues.alwaysAllowWrite ?? false,
