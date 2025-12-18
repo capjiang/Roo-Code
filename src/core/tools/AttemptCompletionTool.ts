@@ -1,4 +1,5 @@
 import * as vscode from "vscode"
+import path from "path"
 
 import { RooCodeEventName, type HistoryItem } from "@roo-code/types"
 import { TelemetryService } from "@roo-code/telemetry"
@@ -9,6 +10,7 @@ import { Package } from "../../shared/package"
 import { BaseTool, ToolCallbacks } from "./BaseTool"
 import type { ToolUse } from "../../shared/tools"
 import { t } from "../../i18n"
+import { runSecurityAuditInWorkspace } from "../security-audit/runSecurityAudit"
 
 interface AttemptCompletionParams {
 	result: string
@@ -84,7 +86,81 @@ export class AttemptCompletionTool extends BaseTool<"attempt_completion"> {
 
 			task.consecutiveMistakeCount = 0
 
-			await task.say("completion_result", result, undefined, false)
+			let completionResultText = result
+
+			// Optional: run a security audit when attempting completion, but only if:
+			// 1) user enabled the feature, and
+			// 2) any write-like tool has modified files since the last audit run.
+			try {
+				const state = await task.providerRef.deref()?.getState()
+				const securityAuditOnCompletionEnabled = state?.securityAuditOnCompletionEnabled ?? false
+
+				if (securityAuditOnCompletionEnabled && task.securityAuditPending) {
+					let auditSection = ""
+
+					try {
+						const audit = await runSecurityAuditInWorkspace(task)
+
+						const auditTitle = t("tools:securityAudit.title")
+						const statusLabel = t("tools:securityAudit.statusLabel")
+						const statusSuccess = t("tools:securityAudit.status.success")
+						const statusFailedNonBlocking = t("tools:securityAudit.status.failedNonBlocking")
+						const sarifLabel = t("tools:securityAudit.sarifLabel")
+						const sarifExpectedLabel = t("tools:securityAudit.sarifExpectedLabel")
+						const sarifNotGenerated = t("tools:securityAudit.sarifNotGenerated")
+						const sarifMayNotExist = t("tools:securityAudit.sarifMayNotExist")
+						const errorLabel = t("tools:securityAudit.errorLabel")
+
+						const relativeSarif =
+							audit.status === "success"
+								? path.relative(audit.workspace, audit.sarifPath)
+								: audit.sarifPath && audit.workspace
+									? path.relative(audit.workspace, audit.sarifPath)
+									: undefined
+
+						const relativeSarifPosix = relativeSarif?.split(path.sep).join("/")
+						const sarifHref = relativeSarifPosix
+							? relativeSarifPosix.startsWith("./")
+								? relativeSarifPosix
+								: `./${relativeSarifPosix}`
+							: undefined
+
+						if (audit.status === "success") {
+							auditSection =
+								`### ${auditTitle}\n` +
+								`- ${statusLabel}: ${statusSuccess}\n` +
+								(sarifHref ? `- ${sarifLabel}: [${sarifHref}](${sarifHref})\n` : "")
+						} else {
+							const sarifLine = sarifHref
+								? `- ${sarifExpectedLabel}: [${sarifHref}](${sarifHref}) ${sarifMayNotExist}\n`
+								: `- ${sarifLabel}: ${sarifNotGenerated}\n`
+
+							auditSection =
+								`### ${auditTitle}\n` +
+								`- ${statusLabel}: ${statusFailedNonBlocking}\n` +
+								sarifLine +
+								`- ${errorLabel}: ${audit.message}\n` +
+								(audit.outputTail ? `\n\`\`\`text\n${audit.outputTail}\n\`\`\`\n` : "")
+						}
+					} catch (auditError) {
+						auditSection =
+							`### ${t("tools:securityAudit.title")}\n` +
+							`- ${t("tools:securityAudit.statusLabel")}: ${t("tools:securityAudit.status.failedNonBlocking")}\n` +
+							`- ${t("tools:securityAudit.errorLabel")}: ${(auditError as Error)?.message ?? String(auditError)}\n`
+					} finally {
+						// Only run once per set of edits.
+						task.securityAuditPending = false
+					}
+
+					if (auditSection) {
+						completionResultText = `${completionResultText}\n\n---\n\n${auditSection}`.trim()
+					}
+				}
+			} catch {
+				// Best-effort: never block completion due to audit gating logic.
+			}
+
+			await task.say("completion_result", completionResultText, undefined, false)
 
 			// Force final token usage update before emitting TaskCompleted
 			// This ensures the most recent stats are captured regardless of throttle timer

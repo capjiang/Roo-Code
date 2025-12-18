@@ -27,5 +27,18 @@
 		"roo": {
 			"authRequired": "图像生成需要 Roo Code Cloud 认证。请登录 Roo Code Cloud。"
 		}
+	},
+	"securityAudit": {
+		"title": "安全审计",
+		"statusLabel": "状态",
+		"errorLabel": "错误",
+		"sarifLabel": "SARIF",
+		"sarifExpectedLabel": "SARIF（预期）",
+		"sarifNotGenerated": "未生成",
+		"sarifMayNotExist": "（文件可能不存在）",
+		"status": {
+			"success": "成功",
+			"failedNonBlocking": "失败（不会阻塞完成）"
+		}
 	}
 }

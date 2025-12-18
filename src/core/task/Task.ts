@@ -267,6 +267,7 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 	diffEnabled: boolean = false
 	fuzzyMatchThreshold: number
 	didEditFile: boolean = false
+	securityAuditPending: boolean = false
 
 	// LLM Messages & Chat Messages
 	apiConversationHistory: ApiMessage[] = []

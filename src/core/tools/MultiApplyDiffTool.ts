@@ -691,6 +691,7 @@ ${errorDetails ? `\nTechnical details:\n${errorDetails}\n` : ""}
 
 				// Used to determine if we should wait for busy terminal to update before sending api request
 				cline.didEditFile = true
+				cline.securityAuditPending = true
 				let partFailHint = ""
 
 				if (successCount < diffItems.length) {

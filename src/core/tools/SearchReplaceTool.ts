@@ -226,6 +226,7 @@ export class SearchReplaceTool extends BaseTool<"search_replace"> {
 			}
 
 			task.didEditFile = true
+			task.securityAuditPending = true
 
 			// Get the formatted response message
 			const message = await task.diffViewProvider.pushToolWriteResult(task, task.cwd, false)

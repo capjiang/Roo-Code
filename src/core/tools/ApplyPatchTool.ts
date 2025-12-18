@@ -200,6 +200,7 @@ export class ApplyPatchTool extends BaseTool<"apply_patch"> {
 		// Track file edit operation
 		await task.fileContextTracker.trackFileContext(relPath, "roo_edited" as RecordSource)
 		task.didEditFile = true
+		task.securityAuditPending = true
 
 		const message = await task.diffViewProvider.pushToolWriteResult(task, task.cwd, true)
 		pushToolResult(message)
@@ -260,6 +261,7 @@ export class ApplyPatchTool extends BaseTool<"apply_patch"> {
 		}
 
 		task.didEditFile = true
+		task.securityAuditPending = true
 		pushToolResult(`Successfully deleted ${relPath}`)
 		task.processQueuedMessages()
 	}
@@ -419,6 +421,7 @@ export class ApplyPatchTool extends BaseTool<"apply_patch"> {
 		}
 
 		task.didEditFile = true
+		task.securityAuditPending = true
 
 		const message = await task.diffViewProvider.pushToolWriteResult(task, task.cwd, false)
 		pushToolResult(message)

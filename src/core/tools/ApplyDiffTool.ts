@@ -236,6 +236,7 @@ export class ApplyDiffTool extends BaseTool<"apply_diff"> {
 
 			// Used to determine if we should wait for busy terminal to update before sending api request
 			task.didEditFile = true
+			task.securityAuditPending = true
 			let partFailHint = ""
 
 			if (diffResult.failParts && diffResult.failParts.length > 0) {
