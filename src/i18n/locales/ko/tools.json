@@ -27,5 +27,18 @@
 		"roo": {
 			"authRequired": "이미지 생성에는 Roo Code Cloud 인증이 필요합니다. Roo Code Cloud에 로그인하세요."
 		}
+	},
+	"securityAudit": {
+		"title": "Security audit",
+		"statusLabel": "Status",
+		"errorLabel": "Error",
+		"sarifLabel": "SARIF",
+		"sarifExpectedLabel": "SARIF (expected)",
+		"sarifNotGenerated": "not generated",
+		"sarifMayNotExist": "(file may not exist)",
+		"status": {
+			"success": "success",
+			"failed": "failed"
+		}
 	}
 }

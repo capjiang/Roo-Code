@@ -97,6 +97,8 @@ export class AttemptCompletionTool extends BaseTool<"attempt_completion"> {
 
 				if (securityAuditOnCompletionEnabled && task.securityAuditPending) {
 					let auditSection = ""
+					let auditSuccess = false
+					let sarifHref: string | undefined
 
 					try {
 						const audit = await runSecurityAuditInWorkspace(task)
@@ -104,7 +106,7 @@ export class AttemptCompletionTool extends BaseTool<"attempt_completion"> {
 						const auditTitle = t("tools:securityAudit.title")
 						const statusLabel = t("tools:securityAudit.statusLabel")
 						const statusSuccess = t("tools:securityAudit.status.success")
-						const statusFailedNonBlocking = t("tools:securityAudit.status.failedNonBlocking")
+						const statusFailed = t("tools:securityAudit.status.failed")
 						const sarifLabel = t("tools:securityAudit.sarifLabel")
 						const sarifExpectedLabel = t("tools:securityAudit.sarifExpectedLabel")
 						const sarifNotGenerated = t("tools:securityAudit.sarifNotGenerated")
@@ -119,33 +121,49 @@ export class AttemptCompletionTool extends BaseTool<"attempt_completion"> {
 									: undefined
 
 						const relativeSarifPosix = relativeSarif?.split(path.sep).join("/")
-						const sarifHref = relativeSarifPosix
+						sarifHref = relativeSarifPosix
 							? relativeSarifPosix.startsWith("./")
 								? relativeSarifPosix
 								: `./${relativeSarifPosix}`
 							: undefined
 
 						if (audit.status === "success") {
+							task.securityAuditLastRun = {
+								status: "success",
+								sarifHref,
+								ranAt: Date.now(),
+							}
 							auditSection =
 								`### ${auditTitle}\n` +
 								`- ${statusLabel}: ${statusSuccess}\n` +
 								(sarifHref ? `- ${sarifLabel}: [${sarifHref}](${sarifHref})\n` : "")
+							auditSuccess = true
 						} else {
+							task.securityAuditLastRun = {
+								status: "failed",
+								sarifHref,
+								ranAt: Date.now(),
+							}
 							const sarifLine = sarifHref
 								? `- ${sarifExpectedLabel}: [${sarifHref}](${sarifHref}) ${sarifMayNotExist}\n`
 								: `- ${sarifLabel}: ${sarifNotGenerated}\n`
 
 							auditSection =
 								`### ${auditTitle}\n` +
-								`- ${statusLabel}: ${statusFailedNonBlocking}\n` +
+								`- ${statusLabel}: ${statusFailed}\n` +
 								sarifLine +
 								`- ${errorLabel}: ${audit.message}\n` +
 								(audit.outputTail ? `\n\`\`\`text\n${audit.outputTail}\n\`\`\`\n` : "")
 						}
 					} catch (auditError) {
+						task.securityAuditLastRun = {
+							status: "failed",
+							sarifHref,
+							ranAt: Date.now(),
+						}
 						auditSection =
 							`### ${t("tools:securityAudit.title")}\n` +
-							`- ${t("tools:securityAudit.statusLabel")}: ${t("tools:securityAudit.status.failedNonBlocking")}\n` +
+							`- ${t("tools:securityAudit.statusLabel")}: ${t("tools:securityAudit.status.fail")}\n` +
 							`- ${t("tools:securityAudit.errorLabel")}: ${(auditError as Error)?.message ?? String(auditError)}\n`
 					} finally {
 						// Only run once per set of edits.

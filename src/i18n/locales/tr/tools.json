@@ -27,5 +27,18 @@
 		"roo": {
 			"authRequired": "Görüntü oluşturma için Roo Code Cloud kimlik doğrulaması gereklidir. Lütfen Roo Code Cloud'da oturum açın."
 		}
+	},
+	"securityAudit": {
+		"title": "Security audit",
+		"statusLabel": "Status",
+		"errorLabel": "Error",
+		"sarifLabel": "SARIF",
+		"sarifExpectedLabel": "SARIF (expected)",
+		"sarifNotGenerated": "not generated",
+		"sarifMayNotExist": "(file may not exist)",
+		"status": {
+			"success": "success",
+			"failed": "failed"
+		}
 	}
 }

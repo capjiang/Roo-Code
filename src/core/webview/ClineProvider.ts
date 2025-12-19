@@ -1994,6 +1994,7 @@ export class ClineProvider
 			clineMessages: this.getCurrentTask()?.clineMessages || [],
 			currentTaskTodos: this.getCurrentTask()?.todoList || [],
 			messageQueue: this.getCurrentTask()?.messageQueueService?.messages,
+			securityAuditLastRun: this.getCurrentTask()?.securityAuditLastRun ?? null,
 			taskHistory: (taskHistory || [])
 				.filter((item: HistoryItem) => item.ts && item.task)
 				.sort((a: HistoryItem, b: HistoryItem) => b.ts - a.ts),

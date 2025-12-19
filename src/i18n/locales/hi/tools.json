@@ -27,5 +27,18 @@
 		"roo": {
 			"authRequired": "छवि निर्माण के लिए Roo Code Cloud प्रमाणीकरण आवश्यक है। कृपया Roo Code Cloud में साइन इन करें।"
 		}
+	},
+	"securityAudit": {
+		"title": "Security audit",
+		"statusLabel": "Status",
+		"errorLabel": "Error",
+		"sarifLabel": "SARIF",
+		"sarifExpectedLabel": "SARIF (expected)",
+		"sarifNotGenerated": "not generated",
+		"sarifMayNotExist": "(file may not exist)",
+		"status": {
+			"success": "success",
+			"failed": "failed"
+		}
 	}
 }

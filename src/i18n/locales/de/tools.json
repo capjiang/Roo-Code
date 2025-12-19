@@ -27,5 +27,18 @@
 		"roo": {
 			"authRequired": "Roo Code Cloud-Authentifizierung ist für die Bildgenerierung erforderlich. Bitte melde dich bei Roo Code Cloud an."
 		}
+	},
+	"securityAudit": {
+		"title": "Security audit",
+		"statusLabel": "Status",
+		"errorLabel": "Error",
+		"sarifLabel": "SARIF",
+		"sarifExpectedLabel": "SARIF (expected)",
+		"sarifNotGenerated": "not generated",
+		"sarifMayNotExist": "(file may not exist)",
+		"status": {
+			"success": "success",
+			"failed": "failed"
+		}
 	}
 }

@@ -63,7 +63,7 @@ import { findLastIndex } from "../../shared/array"
 import { combineApiRequests } from "../../shared/combineApiRequests"
 import { combineCommandSequences } from "../../shared/combineCommandSequences"
 import { t } from "../../i18n"
-import { ClineApiReqCancelReason, ClineApiReqInfo } from "../../shared/ExtensionMessage"
+import { ClineApiReqCancelReason, ClineApiReqInfo, type ExtensionState } from "../../shared/ExtensionMessage"
 import { getApiMetrics, hasTokenUsageChanged, hasToolUsageChanged } from "../../shared/getApiMetrics"
 import { ClineAskResponse } from "../../shared/WebviewMessage"
 import { defaultModeSlug, getModeBySlug, getGroupName } from "../../shared/modes"
@@ -268,6 +268,7 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 	fuzzyMatchThreshold: number
 	didEditFile: boolean = false
 	securityAuditPending: boolean = false
+	securityAuditLastRun: ExtensionState["securityAuditLastRun"] = null
 
 	// LLM Messages & Chat Messages
 	apiConversationHistory: ApiMessage[] = []

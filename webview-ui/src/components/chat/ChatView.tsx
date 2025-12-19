@@ -96,6 +96,7 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 		soundVolume,
 		cloudIsAuthenticated,
 		messageQueue = [],
+		securityAuditLastRun,
 		isBrowserSessionActive,
 	} = useExtensionState()
 
@@ -104,6 +105,8 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 	useEffect(() => {
 		messagesRef.current = messages
 	}, [messages])
+
+	const lastAuditRanAtRef = useRef<number | null>(null)
 
 	// Leaving this less safe version here since if the first message is not a
 	// task, then the extension is in a bad state and needs to be debugged (see
@@ -207,6 +210,11 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 	// would have to true again even if messages didn't change.
 	const lastMessage = useMemo(() => messages.at(-1), [messages])
 	const secondLastMessage = useMemo(() => messages.at(-2), [messages])
+
+	const [hasUsedAuditInterpretation, setHasUsedAuditInterpretation] = useState(false)
+
+	const canInterpretSecurityAudit =
+		securityAuditLastRun?.status === "success" && !!securityAuditLastRun.sarifHref && !hasUsedAuditInterpretation
 
 	const volume = typeof soundVolume === "number" ? soundVolume : 0.5
 	const [playNotification] = useSound(`${audioBaseUri}/notification.wav`, { volume, soundEnabled })
@@ -348,7 +356,9 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 							setClineAsk("completion_result")
 							setEnableButtons(!isPartial)
 							setPrimaryButtonText(t("chat:startNewTask.title"))
-							setSecondaryButtonText(undefined)
+							setSecondaryButtonText(
+								canInterpretSecurityAudit ? t("chat:auditInterpretation.title") : undefined,
+							)
 							break
 						case "resume_task":
 							setSendingDisabled(false)
@@ -377,7 +387,9 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 							setClineAsk("resume_completed_task")
 							setEnableButtons(true)
 							setPrimaryButtonText(t("chat:startNewTask.title"))
-							setSecondaryButtonText(undefined)
+							setSecondaryButtonText(
+								canInterpretSecurityAudit ? t("chat:auditInterpretation.title") : undefined,
+							)
 							setDidClickCancel(false)
 							break
 					}
@@ -411,7 +423,7 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 					break
 			}
 		}
-	}, [lastMessage, secondLastMessage])
+	}, [lastMessage, secondLastMessage, canInterpretSecurityAudit])
 
 	// Update button text when messages change (e.g., completion_result is added) for subtasks in resume_task state
 	useEffect(() => {
@@ -436,12 +448,30 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 		}
 	}, [messages.length])
 
+	// When a new security audit run completes for the current task, allow a fresh
+	// round of audit interpretation. We identify a new run by a changed `ranAt`.
+	useEffect(() => {
+		if (!task) {
+			lastAuditRanAtRef.current = null
+			return
+		}
+
+		const currentRanAt = securityAuditLastRun?.ranAt ?? null
+
+		if (currentRanAt !== null && currentRanAt !== lastAuditRanAtRef.current) {
+			lastAuditRanAtRef.current = currentRanAt
+			setHasUsedAuditInterpretation(false)
+		}
+	}, [task?.ts, securityAuditLastRun?.ranAt, task])
+
 	useEffect(() => {
 		// Reset UI states only when task changes
 		setExpandedRows({})
 		everVisibleMessagesTsRef.current.clear() // Clear for new task
 		setCurrentFollowUpTs(null) // Clear follow-up answered state for new task
 		setIsCondensing(false) // Reset condensing state when switching tasks
+		setHasUsedAuditInterpretation(false) // Allow audit interpretation once per task
+		lastAuditRanAtRef.current = null
 		// Note: sendingDisabled is not reset here as it's managed by message effects
 
 		// Clear any pending auto-approval timeout from previous task
@@ -647,6 +677,20 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 		[inputValue, selectedImages],
 	)
 
+	const triggerSecurityAuditInterpretation = useCallback(() => {
+		// Mark as used for this task so we don't show the button again on subsequent completions.
+		setHasUsedAuditInterpretation(true)
+
+		const sarifHref = securityAuditLastRun?.status === "success" ? securityAuditLastRun.sarifHref : undefined
+
+		if (!sarifHref) {
+			return
+		}
+
+		const prompt = t("chat:auditInterpretation.prompt", { sarifPath: sarifHref })
+		handleSendMessage(prompt, [])
+	}, [handleSendMessage, securityAuditLastRun, t])
+
 	const startNewTask = useCallback(() => vscode.postMessage({ type: "clearTask" }), [])
 
 	// This logic depends on the useEffect[messages] above to set clineAsk,
@@ -744,6 +788,10 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 				case "resume_task":
 					startNewTask()
 					break
+				case "completion_result":
+				case "resume_completed_task":
+					triggerSecurityAuditInterpretation()
+					break
 				case "command":
 				case "tool":
 				case "browser_action_launch":
@@ -772,7 +820,7 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 			setClineAsk(undefined)
 			setEnableButtons(false)
 		},
-		[clineAsk, startNewTask, isStreaming],
+		[clineAsk, startNewTask, isStreaming, triggerSecurityAuditInterpretation],
 	)
 
 	const { info: model } = useSelectedModel(apiConfiguration)
@@ -1541,11 +1589,13 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 													? t("chat:cancel.tooltip")
 													: secondaryButtonText === t("chat:startNewTask.title")
 														? t("chat:startNewTask.tooltip")
-														: secondaryButtonText === t("chat:reject.title")
-															? t("chat:reject.tooltip")
-															: secondaryButtonText === t("chat:terminate.title")
-																? t("chat:terminate.tooltip")
-																: undefined
+														: secondaryButtonText === t("chat:auditInterpretation.title")
+															? t("chat:auditInterpretation.tooltip")
+															: secondaryButtonText === t("chat:reject.title")
+																? t("chat:reject.tooltip")
+																: secondaryButtonText === t("chat:terminate.title")
+																	? t("chat:terminate.tooltip")
+																	: undefined
 											}>
 											<Button
 												variant="secondary"

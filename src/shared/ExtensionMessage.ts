@@ -295,6 +295,23 @@ export type ExtensionState = Pick<
 	clineMessages: ClineMessage[]
 	currentTaskItem?: HistoryItem
 	currentTaskTodos?: TodoItem[] // Initial todos for the current task
+	/**
+	 * Summary of the most recent security audit run for the current task.
+	 * Used by the webview to offer follow-up actions (e.g., "Audit interpretation").
+	 *
+	 * NOTE: This is `null` (not `undefined`) when there is no audit info to avoid
+	 * leaking state across tasks. `undefined` is dropped during postMessage serialization,
+	 * and the webview state merge logic would otherwise keep the previous value.
+	 */
+	securityAuditLastRun?: {
+		status: "success" | "failed"
+		/**
+		 * Workspace-relative path (prefixed with "./") suitable for use in prompts and file links.
+		 * Example: "./.roo/secanalyzer/roo_security_audit.sarif"
+		 */
+		sarifHref?: string
+		ranAt?: number
+	} | null
 	apiConfiguration: ProviderSettings
 	uriScheme?: string
 	shouldShowAnnouncement: boolean

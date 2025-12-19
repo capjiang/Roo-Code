@@ -30,5 +30,18 @@
 		"roo": {
 			"authRequired": "Autentikasi Roo Code Cloud diperlukan untuk menghasilkan gambar. Silakan masuk ke Roo Code Cloud."
 		}
+	},
+	"securityAudit": {
+		"title": "Security audit",
+		"statusLabel": "Status",
+		"errorLabel": "Error",
+		"sarifLabel": "SARIF",
+		"sarifExpectedLabel": "SARIF (expected)",
+		"sarifNotGenerated": "not generated",
+		"sarifMayNotExist": "(file may not exist)",
+		"status": {
+			"success": "success",
+			"failed": "failed"
+		}
 	}
 }

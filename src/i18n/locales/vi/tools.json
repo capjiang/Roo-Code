@@ -27,5 +27,18 @@
 		"roo": {
 			"authRequired": "Yêu cầu xác thực Roo Code Cloud để tạo hình ảnh. Vui lòng đăng nhập vào Roo Code Cloud."
 		}
+	},
+	"securityAudit": {
+		"title": "Security audit",
+		"statusLabel": "Status",
+		"errorLabel": "Error",
+		"sarifLabel": "SARIF",
+		"sarifExpectedLabel": "SARIF (expected)",
+		"sarifNotGenerated": "not generated",
+		"sarifMayNotExist": "(file may not exist)",
+		"status": {
+			"success": "success",
+			"failed": "failed"
+		}
 	}
 }

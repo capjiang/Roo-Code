@@ -38,7 +38,7 @@
 		"sarifMayNotExist": "(file may not exist)",
 		"status": {
 			"success": "success",
-			"failedNonBlocking": "failed (does not block completion)"
+			"failed": "failed"
 		}
 	}
 }

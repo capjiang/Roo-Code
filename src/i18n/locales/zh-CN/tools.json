@@ -38,7 +38,7 @@
 		"sarifMayNotExist": "（文件可能不存在）",
 		"status": {
 			"success": "成功",
-			"failedNonBlocking": "失败（不会阻塞完成）"
+			"failed": "失败"
 		}
 	}
 }
