@@ -1,6 +1,6 @@
 {
-	"greeting": "Welkom bij Roo Code!",
-	"introduction": "Met een reeks ingebouwde en uitbreidbare Modi laat Roo Code je plannen, ontwerpen, coderen, debuggen en je productiviteit verhogen als nooit tevoren.",
+	"greeting": "Welkom bij CodiDroid!",
+	"introduction": "Met een reeks ingebouwde en uitbreidbare Modi laat CodiDroid je plannen, ontwerpen, coderen, debuggen en je productiviteit verhogen als nooit tevoren.",
 	"notice": "Om te beginnen heeft deze extensie een API-provider nodig.",
 	"start": "Aan de slag!",
 	"routers": {
@@ -13,33 +13,33 @@
 		},
 		"roo": {
 			"description": "De beste gratis modellen om mee te beginnen",
-			"incentive": "Probeer Roo gratis uit"
+			"incentive": "Probeer CodiDroid gratis uit"
 		}
 	},
 	"chooseProvider": "Om te beginnen heb je een LLM-provider nodig:",
 	"providerSignup": {
-		"rooCloudProvider": "Roo Code Cloud Provider",
-		"rooCloudDescription": "De eenvoudigste manier om Roo te gebruiken. Een samengestelde mix van gratis en betaalde modellen tegen lage kosten",
+		"rooCloudProvider": "CodiDroid Cloud Provider",
+		"rooCloudDescription": "De eenvoudigste manier om CodiDroid te gebruiken. Een samengestelde mix van gratis en betaalde modellen tegen lage kosten",
 		"learnMore": "meer informatie",
 		"useAnotherProvider": "Gebruik een andere provider",
 		"useAnotherProviderDescription": "Voer een API-sleutel in en ga aan de slag.",
-		"noApiKeys": "Geen zin in sleutels? Kies dan voor de Roo Code Cloud Provider.",
+		"noApiKeys": "Geen zin in sleutels? Kies dan voor de CodiDroid Cloud Provider.",
 		"getStarted": "Beginnen"
 	},
 	"waitingForCloud": {
-		"heading": "We brengen je naar Roo Code Cloud...",
+		"heading": "We brengen je naar CodiDroid Cloud...",
 		"description": "Voltooi de registratie in je browser en je keert automatisch hier terug.",
 		"noPrompt": "Als je niet wordt gevraagd een URL te openen, <clickHere>klik hier</clickHere>.",
 		"havingTrouble": "Als je de registratie hebt voltooid maar problemen hebt, <clickHere>klik hier</clickHere>.",
 		"pasteUrl": "Plak de callback-URL vanuit je browser:",
-		"invalidURL": "Dat ziet er niet uit als een geldige callback-URL. Kopieer wat Roo Code Cloud in je browser toont.",
+		"invalidURL": "Dat ziet er niet uit als een geldige callback-URL. Kopieer wat CodiDroid Cloud in je browser toont.",
 		"goBack": "Terug"
 	},
 	"startRouter": "We raden aan om een LLM-router te gebruiken:",
 	"startCustom": "Of je kunt je eigen API-sleutel gebruiken:",
 	"telemetry": {
-		"helpImprove": "Help Roo Code verbeteren",
-		"helpImproveMessage": "Roo Code verzamelt fout- en gebruiksgegevens om ons te helpen bugs op te lossen en de extensie te verbeteren. Deze telemetrie verzamelt geen code, prompts of persoonlijke informatie. Je kunt dit uitschakelen in de <settingsLink>instellingen</settingsLink>."
+		"helpImprove": "Help CodiDroid verbeteren",
+		"helpImproveMessage": "CodiDroid verzamelt fout- en gebruiksgegevens om ons te helpen bugs op te lossen en de extensie te verbeteren. Deze telemetrie verzamelt geen code, prompts of persoonlijke informatie. Je kunt dit uitschakelen in de <settingsLink>instellingen</settingsLink>."
 	},
 	"importSettings": "Instellingen importeren"
 }

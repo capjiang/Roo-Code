@@ -1,6 +1,6 @@
 {
 	"extension": {
-		"name": "Roo Code",
+		"name": "CodiDroid",
 		"description": "Une équipe complète de développeurs IA dans votre éditeur."
 	},
 	"number_format": {
@@ -92,7 +92,7 @@
 			"processExitedWithError": "Le processus Claude Code s'est terminé avec le code {{exitCode}}. Sortie d'erreur : {{output}}",
 			"stoppedWithReason": "Claude Code s'est arrêté pour la raison : {{reason}}",
 			"apiKeyModelPlanMismatch": "Les clés API et les plans d'abonnement permettent différents modèles. Assurez-vous que le modèle sélectionné est inclus dans votre plan.",
-			"notFound": "Exécutable Claude Code '{{claudePath}}' introuvable.\n\nVeuillez installer Claude Code CLI :\n1. Visitez {{installationUrl}} pour télécharger Claude Code\n2. Suivez les instructions d'installation pour votre système d'exploitation\n3. Assurez-vous que la commande 'claude' est disponible dans votre PATH\n4. Alternativement, configurez un chemin personnalisé dans les paramètres Roo sous 'Chemin de Claude Code'\n\nErreur originale : {{originalError}}"
+			"notFound": "Exécutable Claude Code '{{claudePath}}' introuvable.\n\nVeuillez installer Claude Code CLI :\n1. Visitez {{installationUrl}} pour télécharger Claude Code\n2. Suivez les instructions d'installation pour votre système d'exploitation\n3. Assurez-vous que la commande 'claude' est disponible dans votre PATH\n4. Alternativement, configurez un chemin personnalisé dans les paramètres CodiDroid sous 'Chemin de Claude Code'\n\nErreur originale : {{originalError}}"
 		},
 		"message": {
 			"no_active_task_to_delete": "Aucune tâche active pour supprimer des messages",
@@ -118,7 +118,7 @@
 			"completionError": "Erreur d'achèvement de Cerebras : {{error}}"
 		},
 		"roo": {
-			"authenticationRequired": "Le fournisseur Roo nécessite une authentification cloud. Veuillez vous connecter à Roo Code Cloud."
+			"authenticationRequired": "Le fournisseur CodiDroid nécessite une authentification cloud. Veuillez vous connecter à CodiDroid Cloud."
 		},
 		"api": {
 			"invalidKeyInvalidChars": "La clé API contient des caractères invalides."
@@ -178,7 +178,7 @@
 		"enter_valid_path": "Veuillez entrer un chemin valide"
 	},
 	"input": {
-		"task_prompt": "Que doit faire Roo ?",
+		"task_prompt": "Que doit faire CodiDroid ?",
 		"task_placeholder": "Écris ta tâche ici"
 	},
 	"settings": {
@@ -216,8 +216,8 @@
 	},
 	"mdm": {
 		"errors": {
-			"cloud_auth_required": "Votre organisation nécessite une authentification Roo Code Cloud. Veuillez vous connecter pour continuer.",
-			"organization_mismatch": "Vous devez être authentifié avec le compte Roo Code Cloud de votre organisation.",
+			"cloud_auth_required": "Votre organisation nécessite une authentification CodiDroid Cloud. Veuillez vous connecter pour continuer.",
+			"organization_mismatch": "Vous devez être authentifié avec le compte CodiDroid Cloud de votre organisation.",
 			"manual_url_empty": "Veuillez entrer une URL de callback valide",
 			"manual_url_no_query": "URL de callback invalide : paramètres de requête manquants",
 			"manual_url_missing_params": "URL de callback invalide : paramètres requis manquants (code et state)",

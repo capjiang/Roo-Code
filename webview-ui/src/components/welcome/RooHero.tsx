@@ -19,7 +19,7 @@ const RooHero = () => {
 					maskSize: "contain",
 				}}
 				className="mx-auto group-hover:animate-bounce translate-y-0 transition-transform duration-500">
-				<img src={imagesBaseUri + "/roo-logo.svg"} alt="Roo logo" className="h-8 opacity-0" />
+				<img src={imagesBaseUri + "/roo-logo.svg"} alt="CodiDroid logo" className="h-8 opacity-0" />
 			</div>
 		</div>
 	)

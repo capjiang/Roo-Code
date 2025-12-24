@@ -104,7 +104,7 @@ async function fetchModelsFromProvider(options: GetModelsOptions): Promise<Model
 			models = await getHuggingFaceModels()
 			break
 		case "roo": {
-			// Roo Code Cloud provider requires baseUrl and optional apiKey
+			// CodiDroid Cloud provider requires baseUrl and optional apiKey
 			const rooBaseUrl = options.baseUrl ?? process.env.ROO_CODE_PROVIDER_URL ?? "https://api.roocode.com/proxy"
 			models = await getRooModels(rooBaseUrl, options.apiKey)
 			break

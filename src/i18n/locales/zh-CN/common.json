@@ -1,6 +1,6 @@
 {
 	"extension": {
-		"name": "Roo Code",
+		"name": "CodiDroid",
 		"description": "您编辑器中的完整AI开发团队。"
 	},
 	"number_format": {
@@ -97,7 +97,7 @@
 			"processExitedWithError": "Claude Code 进程退出，退出码：{{exitCode}}。错误输出：{{output}}",
 			"stoppedWithReason": "Claude Code 停止，原因：{{reason}}",
 			"apiKeyModelPlanMismatch": "API keys and subscription plans allow different models. Make sure the selected model is included in your plan.",
-			"notFound": "Claude Code executable '{{claudePath}}' not found.\n\nPlease install Claude Code CLI:\n1. Visit {{installationUrl}} to download Claude Code\n2. Follow the installation instructions for your operating system\n3. Ensure the 'claude' command is available in your PATH\n4. Alternatively, configure a custom path in Roo settings under 'Claude Code Path'\n\nOriginal error: {{originalError}}"
+			"notFound": "Claude Code executable '{{claudePath}}' not found.\n\nPlease install Claude Code CLI:\n1. Visit {{installationUrl}} to download Claude Code\n2. Follow the installation instructions for your operating system\n3. Ensure the 'claude' command is available in your PATH\n4. Alternatively, configure a custom path in CodiDroid settings under 'Claude Code Path'\n\nOriginal error: {{originalError}}"
 		},
 		"message": {
 			"no_active_task_to_delete": "没有可删除消息的活跃任务",
@@ -123,7 +123,7 @@
 			"completionError": "Cerebras 完成错误：{{error}}"
 		},
 		"roo": {
-			"authenticationRequired": "Roo 提供商需要云认证。请登录 Roo Code Cloud。"
+			"authenticationRequired": "CodiDroid 提供商需要云认证。请登录 CodiDroid Cloud。"
 		},
 		"api": {
 			"invalidKeyInvalidChars": "API 密钥包含无效字符。"
@@ -183,7 +183,7 @@
 		"enter_valid_path": "请输入有效的路径"
 	},
 	"input": {
-		"task_prompt": "让Roo做什么？",
+		"task_prompt": "让CodiDroid做什么？",
 		"task_placeholder": "在这里输入任务"
 	},
 	"settings": {
@@ -221,8 +221,8 @@
 	},
 	"mdm": {
 		"errors": {
-			"cloud_auth_required": "您的组织需要 Roo Code Cloud 身份验证。请登录以继续。",
-			"organization_mismatch": "您必须使用组织的 Roo Code Cloud 账户进行身份验证。",
+			"cloud_auth_required": "您的组织需要 CodiDroid Cloud 身份验证。请登录以继续。",
+			"organization_mismatch": "您必须使用组织的 CodiDroid Cloud 账户进行身份验证。",
 			"manual_url_empty": "请输入有效的回调 URL",
 			"manual_url_no_query": "无效的回调 URL：缺少查询参数",
 			"manual_url_missing_params": "无效的回调 URL：缺少必需参数（code 和 state）",

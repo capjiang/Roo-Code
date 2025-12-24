@@ -7,7 +7,7 @@ vi.mock("../../i18n", () => ({
 			const installationUrl = options?.installationUrl || "https://docs.anthropic.com/en/docs/claude-code/setup"
 			const originalError = options?.originalError || "spawn claude ENOENT"
 
-			return `Claude Code executable '${claudePath}' not found.\n\nPlease install Claude Code CLI:\n1. Visit ${installationUrl} to download Claude Code\n2. Follow the installation instructions for your operating system\n3. Ensure the 'claude' command is available in your PATH\n4. Alternatively, configure a custom path in Roo settings under 'Claude Code Path'\n\nOriginal error: ${originalError}`
+			return `Claude Code executable '${claudePath}' not found.\n\nPlease install Claude Code CLI:\n1. Visit ${installationUrl} to download Claude Code\n2. Follow the installation instructions for your operating system\n3. Ensure the 'claude' command is available in your PATH\n4. Alternatively, configure a custom path in CodiDroid settings under 'Claude Code Path'\n\nOriginal error: ${originalError}`
 		}
 		// Return the key as fallback for other translations
 		return key

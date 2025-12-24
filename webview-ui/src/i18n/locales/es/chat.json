@@ -1,5 +1,5 @@
 {
-	"greeting": "Bienvenido a Roo Code",
+	"greeting": "Bienvenido a CodiDroid",
 	"task": {
 		"title": "Tarea",
 		"expand": "Expandir tarea",
@@ -21,12 +21,12 @@
 		"sharePublicly": "Compartir públicamente",
 		"sharePubliclyDescription": "Cualquiera con el enlace puede acceder",
 		"connectToCloud": "Conectar al Cloud",
-		"connectToCloudDescription": "Inicia sesión en Roo Code Cloud para compartir tareas",
+		"connectToCloudDescription": "Inicia sesión en CodiDroid Cloud para compartir tareas",
 		"sharingDisabledByOrganization": "Compartir deshabilitado por la organización",
 		"shareSuccessOrganization": "Enlace de organización copiado al portapapeles",
 		"shareSuccessPublic": "Enlace público copiado al portapapeles",
-		"openInCloud": "Abrir tarea en Roo Code Cloud",
-		"openInCloudIntro": "Continúa monitoreando o interactuando con Roo desde cualquier lugar. Escanea, haz clic o copia para abrir.",
+		"openInCloud": "Abrir tarea en CodiDroid Cloud",
+		"openInCloudIntro": "Continúa monitoreando o interactuando con CodiDroid desde cualquier lugar. Escanea, haz clic o copia para abrir.",
 		"openApiHistory": "Abrir historial de API",
 		"openUiHistory": "Abrir historial de UI"
 	},
@@ -87,7 +87,7 @@
 		"tooltip": "Cancelar la operación actual"
 	},
 	"scrollToBottom": "Desplazarse al final del chat",
-	"about": "Roo Code es todo un equipo de desarrollo de IA en tu editor.",
+	"about": "CodiDroid es todo un equipo de desarrollo de IA en tu editor.",
 	"docs": "Consulta nuestra <DocsLink>documentación</DocsLink> para saber más.",
 	"onboarding": "Tu lista de tareas en este espacio de trabajo está vacía.",
 	"rooTips": {
@@ -116,7 +116,7 @@
 		"title": "Modos",
 		"marketplace": "Marketplace de Modos",
 		"settings": "Configuración de Modos",
-		"description": "Personalidades especializadas que adaptan el comportamiento de Roo.",
+		"description": "Personalidades especializadas que adaptan el comportamiento de CodiDroid.",
 		"searchPlaceholder": "Buscar modos...",
 		"noResults": "No se encontraron resultados"
 	},
@@ -130,7 +130,7 @@
 	"diffError": {
 		"title": "Edición fallida"
 	},
-	"troubleMessage": "Roo está teniendo problemas...",
+	"troubleMessage": "CodiDroid está teniendo problemas...",
 	"apiRequest": {
 		"title": "Solicitud API",
 		"failed": "Solicitud API falló",
@@ -146,7 +146,7 @@
 			"403": "No autorizado. Tu clave API es válida, pero el proveedor se negó a completar esta solicitud.",
 			"429": "Demasiadas solicitudes. Te estás viendo limitado por el proveedor. Por favor espera un poco antes de tu próxima llamada API.",
 			"500": "Error del servidor del proveedor. Algo está mal en el lado del proveedor, no hay nada mal con tu solicitud.",
-			"unknown": "Error API desconocido. Por favor contacta al soporte de Roo Code."
+			"unknown": "Error API desconocido. Por favor contacta al soporte de CodiDroid."
 		}
 	},
 	"checkpoint": {
@@ -169,46 +169,46 @@
 		"current": "Actual"
 	},
 	"instructions": {
-		"wantsToFetch": "Roo quiere obtener instrucciones detalladas para ayudar con la tarea actual"
+		"wantsToFetch": "CodiDroid quiere obtener instrucciones detalladas para ayudar con la tarea actual"
 	},
 	"fileOperations": {
-		"wantsToRead": "Roo quiere leer este archivo",
-		"wantsToReadOutsideWorkspace": "Roo quiere leer este archivo fuera del espacio de trabajo",
-		"didRead": "Roo leyó este archivo",
-		"wantsToEdit": "Roo quiere editar este archivo",
-		"wantsToEditOutsideWorkspace": "Roo quiere editar este archivo fuera del espacio de trabajo",
-		"wantsToEditProtected": "Roo quiere editar un archivo de configuración protegido",
-		"wantsToCreate": "Roo quiere crear un nuevo archivo",
-		"wantsToSearchReplace": "Roo quiere realizar búsqueda y reemplazo en este archivo",
-		"didSearchReplace": "Roo realizó búsqueda y reemplazo en este archivo",
-		"wantsToInsert": "Roo quiere insertar contenido en este archivo",
-		"wantsToInsertWithLineNumber": "Roo quiere insertar contenido en este archivo en la línea {{lineNumber}}",
-		"wantsToInsertAtEnd": "Roo quiere añadir contenido al final de este archivo",
-		"wantsToReadAndXMore": "Roo quiere leer este archivo y {{count}} más",
-		"wantsToReadMultiple": "Roo quiere leer varios archivos",
-		"wantsToApplyBatchChanges": "Roo quiere aplicar cambios a múltiples archivos",
-		"wantsToGenerateImage": "Roo quiere generar una imagen",
-		"wantsToGenerateImageOutsideWorkspace": "Roo quiere generar una imagen fuera del espacio de trabajo",
-		"wantsToGenerateImageProtected": "Roo quiere generar una imagen en una ubicación protegida",
-		"didGenerateImage": "Roo generó una imagen"
+		"wantsToRead": "CodiDroid quiere leer este archivo",
+		"wantsToReadOutsideWorkspace": "CodiDroid quiere leer este archivo fuera del espacio de trabajo",
+		"didRead": "CodiDroid leyó este archivo",
+		"wantsToEdit": "CodiDroid quiere editar este archivo",
+		"wantsToEditOutsideWorkspace": "CodiDroid quiere editar este archivo fuera del espacio de trabajo",
+		"wantsToEditProtected": "CodiDroid quiere editar un archivo de configuración protegido",
+		"wantsToCreate": "CodiDroid quiere crear un nuevo archivo",
+		"wantsToSearchReplace": "CodiDroid quiere realizar búsqueda y reemplazo en este archivo",
+		"didSearchReplace": "CodiDroid realizó búsqueda y reemplazo en este archivo",
+		"wantsToInsert": "CodiDroid quiere insertar contenido en este archivo",
+		"wantsToInsertWithLineNumber": "CodiDroid quiere insertar contenido en este archivo en la línea {{lineNumber}}",
+		"wantsToInsertAtEnd": "CodiDroid quiere añadir contenido al final de este archivo",
+		"wantsToReadAndXMore": "CodiDroid quiere leer este archivo y {{count}} más",
+		"wantsToReadMultiple": "CodiDroid quiere leer varios archivos",
+		"wantsToApplyBatchChanges": "CodiDroid quiere aplicar cambios a múltiples archivos",
+		"wantsToGenerateImage": "CodiDroid quiere generar una imagen",
+		"wantsToGenerateImageOutsideWorkspace": "CodiDroid quiere generar una imagen fuera del espacio de trabajo",
+		"wantsToGenerateImageProtected": "CodiDroid quiere generar una imagen en una ubicación protegida",
+		"didGenerateImage": "CodiDroid generó una imagen"
 	},
 	"directoryOperations": {
-		"wantsToViewTopLevel": "Roo quiere ver los archivos de nivel superior en este directorio",
-		"didViewTopLevel": "Roo vio los archivos de nivel superior en este directorio",
-		"wantsToViewRecursive": "Roo quiere ver recursivamente todos los archivos en este directorio",
-		"didViewRecursive": "Roo vio recursivamente todos los archivos en este directorio",
-		"wantsToViewDefinitions": "Roo quiere ver nombres de definiciones de código fuente utilizados en este directorio",
-		"didViewDefinitions": "Roo vio nombres de definiciones de código fuente utilizados en este directorio",
-		"wantsToSearch": "Roo quiere buscar en este directorio <code>{{regex}}</code>",
-		"didSearch": "Roo buscó en este directorio <code>{{regex}}</code>",
-		"wantsToSearchOutsideWorkspace": "Roo quiere buscar en este directorio (fuera del espacio de trabajo) <code>{{regex}}</code>",
-		"didSearchOutsideWorkspace": "Roo buscó en este directorio (fuera del espacio de trabajo) <code>{{regex}}</code>",
-		"wantsToViewTopLevelOutsideWorkspace": "Roo quiere ver los archivos de nivel superior en este directorio (fuera del espacio de trabajo)",
-		"didViewTopLevelOutsideWorkspace": "Roo vio los archivos de nivel superior en este directorio (fuera del espacio de trabajo)",
-		"wantsToViewRecursiveOutsideWorkspace": "Roo quiere ver recursivamente todos los archivos en este directorio (fuera del espacio de trabajo)",
-		"didViewRecursiveOutsideWorkspace": "Roo vio recursivamente todos los archivos en este directorio (fuera del espacio de trabajo)",
-		"wantsToViewDefinitionsOutsideWorkspace": "Roo quiere ver nombres de definiciones de código fuente utilizados en este directorio (fuera del espacio de trabajo)",
-		"didViewDefinitionsOutsideWorkspace": "Roo vio nombres de definiciones de código fuente utilizados en este directorio (fuera del espacio de trabajo)"
+		"wantsToViewTopLevel": "CodiDroid quiere ver los archivos de nivel superior en este directorio",
+		"didViewTopLevel": "CodiDroid vio los archivos de nivel superior en este directorio",
+		"wantsToViewRecursive": "CodiDroid quiere ver recursivamente todos los archivos en este directorio",
+		"didViewRecursive": "CodiDroid vio recursivamente todos los archivos en este directorio",
+		"wantsToViewDefinitions": "CodiDroid quiere ver nombres de definiciones de código fuente utilizados en este directorio",
+		"didViewDefinitions": "CodiDroid vio nombres de definiciones de código fuente utilizados en este directorio",
+		"wantsToSearch": "CodiDroid quiere buscar en este directorio <code>{{regex}}</code>",
+		"didSearch": "CodiDroid buscó en este directorio <code>{{regex}}</code>",
+		"wantsToSearchOutsideWorkspace": "CodiDroid quiere buscar en este directorio (fuera del espacio de trabajo) <code>{{regex}}</code>",
+		"didSearchOutsideWorkspace": "CodiDroid buscó en este directorio (fuera del espacio de trabajo) <code>{{regex}}</code>",
+		"wantsToViewTopLevelOutsideWorkspace": "CodiDroid quiere ver los archivos de nivel superior en este directorio (fuera del espacio de trabajo)",
+		"didViewTopLevelOutsideWorkspace": "CodiDroid vio los archivos de nivel superior en este directorio (fuera del espacio de trabajo)",
+		"wantsToViewRecursiveOutsideWorkspace": "CodiDroid quiere ver recursivamente todos los archivos en este directorio (fuera del espacio de trabajo)",
+		"didViewRecursiveOutsideWorkspace": "CodiDroid vio recursivamente todos los archivos en este directorio (fuera del espacio de trabajo)",
+		"wantsToViewDefinitionsOutsideWorkspace": "CodiDroid quiere ver nombres de definiciones de código fuente utilizados en este directorio (fuera del espacio de trabajo)",
+		"didViewDefinitionsOutsideWorkspace": "CodiDroid vio nombres de definiciones de código fuente utilizados en este directorio (fuera del espacio de trabajo)"
 	},
 	"commandOutput": "Salida del comando",
 	"commandExecution": {
@@ -230,24 +230,24 @@
 	"response": "Respuesta",
 	"arguments": "Argumentos",
 	"text": {
-		"rooSaid": "Roo ha dicho"
+		"rooSaid": "CodiDroid ha dicho"
 	},
 	"feedback": {
 		"youSaid": "Has dicho"
 	},
 	"mcp": {
-		"wantsToUseTool": "Roo quiere usar una herramienta en el servidor MCP {{serverName}}",
-		"wantsToAccessResource": "Roo quiere acceder a un recurso en el servidor MCP {{serverName}}"
+		"wantsToUseTool": "CodiDroid quiere usar una herramienta en el servidor MCP {{serverName}}",
+		"wantsToAccessResource": "CodiDroid quiere acceder a un recurso en el servidor MCP {{serverName}}"
 	},
 	"modes": {
-		"wantsToSwitch": "Roo quiere cambiar a modo <code>{{mode}}</code>",
-		"wantsToSwitchWithReason": "Roo quiere cambiar a modo <code>{{mode}}</code> porque: {{reason}}",
-		"didSwitch": "Roo cambió a modo <code>{{mode}}</code>",
-		"didSwitchWithReason": "Roo cambió a modo <code>{{mode}}</code> porque: {{reason}}"
+		"wantsToSwitch": "CodiDroid quiere cambiar a modo <code>{{mode}}</code>",
+		"wantsToSwitchWithReason": "CodiDroid quiere cambiar a modo <code>{{mode}}</code> porque: {{reason}}",
+		"didSwitch": "CodiDroid cambió a modo <code>{{mode}}</code>",
+		"didSwitchWithReason": "CodiDroid cambió a modo <code>{{mode}}</code> porque: {{reason}}"
 	},
 	"subtasks": {
-		"wantsToCreate": "Roo quiere crear una nueva subtarea en modo <code>{{mode}}</code>",
-		"wantsToFinish": "Roo quiere finalizar esta subtarea",
+		"wantsToCreate": "CodiDroid quiere crear una nueva subtarea en modo <code>{{mode}}</code>",
+		"wantsToFinish": "CodiDroid quiere finalizar esta subtarea",
 		"newTaskContent": "Instrucciones de la subtarea",
 		"completionContent": "Subtarea completada",
 		"resultContent": "Resultados de la subtarea",
@@ -255,7 +255,7 @@
 		"completionInstructions": "¡Subtarea completada! Puedes revisar los resultados y sugerir correcciones o próximos pasos. Si todo se ve bien, confirma para devolver el resultado a la tarea principal."
 	},
 	"questions": {
-		"hasQuestion": "Roo tiene una pregunta"
+		"hasQuestion": "CodiDroid tiene una pregunta"
 	},
 	"taskCompleted": "Tarea completada",
 	"powershell": {
@@ -304,18 +304,18 @@
 		"countdownDisplay": "{{count}}s"
 	},
 	"announcement": {
-		"title": "🎉 Roo Code {{version}} publicado",
+		"title": "🎉 CodiDroid {{version}} publicado",
 		"stealthModel": {
-			"feature": "<bold>Modelo stealth GRATUITO por tiempo limitado</bold> - Code Supernova: ¡Ahora actualizado con una <bold>ventana de contexto de 1M tokens</bold>! Un modelo de codificación agéntica versátil que soporta entradas de imágenes, accesible a través de Roo Code Cloud.",
+			"feature": "<bold>Modelo stealth GRATUITO por tiempo limitado</bold> - Code Supernova: ¡Ahora actualizado con una <bold>ventana de contexto de 1M tokens</bold>! Un modelo de codificación agéntica versátil que soporta entradas de imágenes, accesible a través de CodiDroid Cloud.",
 			"note": "(Nota: los prompts y completaciones son registrados por el creador del modelo y utilizados para mejorarlo)",
-			"connectButton": "Conectar a Roo Code Cloud",
-			"selectModel": "Selecciona <code>roo/code-supernova</code> del proveedor Roo Code Cloud en Configuración para comenzar.",
+			"connectButton": "Conectar a CodiDroid Cloud",
+			"selectModel": "Selecciona <code>roo/code-supernova</code> del proveedor CodiDroid Cloud en Configuración para comenzar.",
 			"goToSettingsButton": "Ir a Configuración"
 		},
 		"release": {
 			"heading": "Novedades en esta versión:",
 			"contextRewind": "La condensación mejorada del contexto ahora te permite restaurar el contexto anterior completo cuando retrocedes a un punto de control",
-			"rooProvider": "El proveedor de Roo Code Cloud ahora preserva el contenido del razonamiento y usa herramientas nativas de forma predeterminada para mejor rendimiento"
+			"rooProvider": "El proveedor de CodiDroid Cloud ahora preserva el contenido del razonamiento y usa herramientas nativas de forma predeterminada para mejor rendimiento"
 		},
 		"cloudAgents": {
 			"heading": "Novedades en la Nube:",
@@ -328,7 +328,7 @@
 	},
 	"browser": {
 		"session": "Sesión del navegador",
-		"rooWantsToUse": "Roo quiere usar el navegador",
+		"rooWantsToUse": "CodiDroid quiere usar el navegador",
 		"consoleLogs": "Registros de la consola",
 		"noNewLogs": "(No hay nuevos registros)",
 		"screenshot": "Captura de pantalla del navegador",
@@ -362,24 +362,24 @@
 	"profileViolationWarning": "El perfil actual no es compatible con la configuración de tu organización",
 	"shellIntegration": {
 		"title": "Advertencia de ejecución de comandos",
-		"description": "Tu comando se está ejecutando sin la integración de shell de terminal de VSCode. Para suprimir esta advertencia, puedes desactivar la integración de shell en la sección <strong>Terminal</strong> de la <settingsLink>configuración de Roo Code</settingsLink> o solucionar problemas de integración de terminal de VSCode usando el enlace de abajo.",
+		"description": "Tu comando se está ejecutando sin la integración de shell de terminal de VSCode. Para suprimir esta advertencia, puedes desactivar la integración de shell en la sección <strong>Terminal</strong> de la <settingsLink>configuración de CodiDroid</settingsLink> o solucionar problemas de integración de terminal de VSCode usando el enlace de abajo.",
 		"troubleshooting": "Haz clic aquí para ver la documentación de integración de shell."
 	},
 	"ask": {
 		"autoApprovedRequestLimitReached": {
 			"title": "Límite de Solicitudes Auto-aprobadas Alcanzado",
-			"description": "Roo ha alcanzado el límite auto-aprobado de {{count}} solicitud(es) API. ¿Deseas reiniciar el contador y continuar con la tarea?",
+			"description": "CodiDroid ha alcanzado el límite auto-aprobado de {{count}} solicitud(es) API. ¿Deseas reiniciar el contador y continuar con la tarea?",
 			"button": "Reiniciar y Continuar"
 		},
 		"autoApprovedCostLimitReached": {
 			"title": "Límite de Costo Auto-Aprobado Alcanzado",
-			"description": "Roo ha alcanzado el límite de costo autoaprobado de ${{count}}. ¿Le gustaría reiniciar el costo y continuar con la tarea?",
+			"description": "CodiDroid ha alcanzado el límite de costo autoaprobado de ${{count}}. ¿Le gustaría reiniciar el costo y continuar con la tarea?",
 			"button": "Reiniciar y continuar"
 		}
 	},
 	"codebaseSearch": {
-		"wantsToSearch": "Roo quiere buscar en la base de código <code>{{query}}</code>",
-		"wantsToSearchWithPath": "Roo quiere buscar en la base de código <code>{{query}}</code> en <code>{{path}}</code>",
+		"wantsToSearch": "CodiDroid quiere buscar en la base de código <code>{{query}}</code>",
+		"wantsToSearchWithPath": "CodiDroid quiere buscar en la base de código <code>{{query}}</code> en <code>{{path}}</code>",
 		"didSearch_one": "Se encontró 1 resultado",
 		"didSearch_other": "Se encontraron {{count}} resultados",
 		"resultTooltip": "Puntuación de similitud: {{score}} (haz clic para abrir el archivo)"
@@ -403,7 +403,7 @@
 		"ariaLabel": "Versión {{version}} - Haz clic para ver las notas de la versión"
 	},
 	"rooCloudCTA": {
-		"title": "¡Roo Code Cloud está evolucionando!",
+		"title": "¡CodiDroid Cloud está evolucionando!",
 		"description": "Ejecuta agentes remotos en la nube, accede a tus tareas desde cualquier lugar, colabora con otros y mucho más.",
 		"joinWaitlist": "Regístrate para recibir las últimas actualizaciones."
 	},
@@ -444,8 +444,8 @@
 		"clickToEdit": "Haz clic para editar el mensaje"
 	},
 	"slashCommand": {
-		"wantsToRun": "Roo quiere ejecutar un comando slash",
-		"didRun": "Roo ejecutó un comando slash"
+		"wantsToRun": "CodiDroid quiere ejecutar un comando slash",
+		"didRun": "CodiDroid ejecutó un comando slash"
 	},
 	"todo": {
 		"partial": "{{completed}} de {{total}} tareas pendientes realizadas",

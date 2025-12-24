@@ -52,3 +52,4 @@ qdrant_storage/
 
 # VSCODE
 .vscode/
+docker/

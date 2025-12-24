@@ -1,6 +1,6 @@
 {
 	"extension": {
-		"name": "Roo Code",
+		"name": "CodiDroid",
 		"description": "에디터 내에서 동작하는 AI 개발팀 전체입니다."
 	},
 	"number_format": {
@@ -92,7 +92,7 @@
 			"processExitedWithError": "Claude Code 프로세스가 코드 {{exitCode}}로 종료되었습니다. 오류 출력: {{output}}",
 			"stoppedWithReason": "Claude Code가 다음 이유로 중지되었습니다: {{reason}}",
 			"apiKeyModelPlanMismatch": "API keys and subscription plans allow different models. Make sure the selected model is included in your plan.",
-			"notFound": "Claude Code executable '{{claudePath}}' not found.\n\nPlease install Claude Code CLI:\n1. Visit {{installationUrl}} to download Claude Code\n2. Follow the installation instructions for your operating system\n3. Ensure the 'claude' command is available in your PATH\n4. Alternatively, configure a custom path in Roo settings under 'Claude Code Path'\n\nOriginal error: {{originalError}}"
+			"notFound": "Claude Code executable '{{claudePath}}' not found.\n\nPlease install Claude Code CLI:\n1. Visit {{installationUrl}} to download Claude Code\n2. Follow the installation instructions for your operating system\n3. Ensure the 'claude' command is available in your PATH\n4. Alternatively, configure a custom path in CodiDroid settings under 'Claude Code Path'\n\nOriginal error: {{originalError}}"
 		},
 		"message": {
 			"no_active_task_to_delete": "메시지를 삭제할 활성 작업이 없습니다",
@@ -118,7 +118,7 @@
 			"completionError": "Cerebras 완료 오류: {{error}}"
 		},
 		"roo": {
-			"authenticationRequired": "Roo 제공업체는 클라우드 인증이 필요합니다. Roo Code Cloud에 로그인하세요."
+			"authenticationRequired": "CodiDroid 제공업체는 클라우드 인증이 필요합니다. CodiDroid Cloud에 로그인하세요."
 		},
 		"api": {
 			"invalidKeyInvalidChars": "API 키에 유효하지 않은 문자가 포함되어 있습니다."
@@ -178,7 +178,7 @@
 		"enter_valid_path": "유효한 경로를 입력하세요"
 	},
 	"input": {
-		"task_prompt": "Roo에게 무엇을 시킬까요?",
+		"task_prompt": "CodiDroid에게 무엇을 시킬까요?",
 		"task_placeholder": "여기에 작업을 입력하세요"
 	},
 	"settings": {
@@ -216,8 +216,8 @@
 	},
 	"mdm": {
 		"errors": {
-			"cloud_auth_required": "조직에서 Roo Code Cloud 인증이 필요합니다. 계속하려면 로그인하세요.",
-			"organization_mismatch": "조직의 Roo Code Cloud 계정으로 인증해야 합니다.",
+			"cloud_auth_required": "조직에서 CodiDroid Cloud 인증이 필요합니다. 계속하려면 로그인하세요.",
+			"organization_mismatch": "조직의 CodiDroid Cloud 계정으로 인증해야 합니다.",
 			"manual_url_empty": "유효한 콜백 URL을 입력하세요",
 			"manual_url_no_query": "유효하지 않은 콜백 URL: 쿼리 매개변수 누락",
 			"manual_url_missing_params": "유효하지 않은 콜백 URL: 필요한 매개변수 누락 (code와 state)",

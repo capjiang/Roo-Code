@@ -6,10 +6,10 @@ import { parseApiPrice } from "../../../shared/cost"
 import { DEFAULT_HEADERS } from "../constants"
 
 /**
- * Fetches available models from the Roo Code Cloud provider
+ * Fetches available models from the CodiDroid Cloud provider
  *
- * @param baseUrl The base URL of the Roo Code Cloud provider
- * @param apiKey The API key (session token) for the Roo Code Cloud provider
+ * @param baseUrl The base URL of the CodiDroid Cloud provider
+ * @param apiKey The API key (session token) for the CodiDroid Cloud provider
  * @returns A promise that resolves to a record of model IDs to model info
  * @throws Will throw an error if the request fails or the response is not as expected.
  */
@@ -65,9 +65,9 @@ export async function getRooModels(baseUrl: string, apiKey?: string): Promise<Mo
 			const parsed = RooModelsResponseSchema.safeParse(data)
 
 			if (!parsed.success) {
-				console.error("Error fetching Roo Code Cloud models: Unexpected response format", data)
+				console.error("Error fetching CodiDroid Cloud models: Unexpected response format", data)
 				console.error("Validation errors:", parsed.error.format())
-				throw new Error("Failed to fetch Roo Code Cloud models: Unexpected response format.")
+				throw new Error("Failed to fetch CodiDroid Cloud models: Unexpected response format.")
 			}
 
 			// Process the validated model data
@@ -139,7 +139,7 @@ export async function getRooModels(baseUrl: string, apiKey?: string): Promise<Mo
 		}
 	} catch (error: any) {
 		// Enhanced error logging
-		console.error("[getRooModels] Error fetching Roo Code Cloud models:", {
+		console.error("[getRooModels] Error fetching CodiDroid Cloud models:", {
 			message: error.message || String(error),
 			name: error.name,
 			stack: error.stack,
@@ -149,21 +149,21 @@ export async function getRooModels(baseUrl: string, apiKey?: string): Promise<Mo
 
 		// Handle abort/timeout
 		if (error.name === "AbortError") {
-			throw new Error("Failed to fetch Roo Code Cloud models: Request timed out after 10 seconds.")
+			throw new Error("Failed to fetch CodiDroid Cloud models: Request timed out after 10 seconds.")
 		}
 
 		// Handle fetch errors
 		if (error.message?.includes("HTTP")) {
-			throw new Error(`Failed to fetch Roo Code Cloud models: ${error.message}. Check base URL and API key.`)
+			throw new Error(`Failed to fetch CodiDroid Cloud models: ${error.message}. Check base URL and API key.`)
 		}
 
 		// Handle network errors
 		if (error instanceof TypeError) {
 			throw new Error(
-				"Failed to fetch Roo Code Cloud models: No response from server. Check Roo Code Cloud server status and base URL.",
+				"Failed to fetch CodiDroid Cloud models: No response from server. Check CodiDroid Cloud server status and base URL.",
 			)
 		}
 
-		throw new Error(`Failed to fetch Roo Code Cloud models: ${error.message || "An unknown error occurred."}`)
+		throw new Error(`Failed to fetch CodiDroid Cloud models: ${error.message || "An unknown error occurred."}`)
 	}
 }

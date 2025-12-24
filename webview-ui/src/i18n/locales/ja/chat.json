@@ -1,5 +1,5 @@
 {
-	"greeting": "Roo Code へようこそ",
+	"greeting": "CodiDroid へようこそ",
 	"task": {
 		"title": "タスク",
 		"expand": "タスクを展開",
@@ -21,12 +21,12 @@
 		"sharePublicly": "公開で共有",
 		"sharePubliclyDescription": "リンクを持つ誰でもアクセスできます",
 		"connectToCloud": "クラウドに接続",
-		"connectToCloudDescription": "タスクを共有するためにRoo Code Cloudにサインイン",
+		"connectToCloudDescription": "タスクを共有するためにCodiDroid Cloudにサインイン",
 		"sharingDisabledByOrganization": "組織により共有が無効化されています",
 		"shareSuccessOrganization": "組織リンクをクリップボードにコピーしました",
 		"shareSuccessPublic": "公開リンクをクリップボードにコピーしました",
-		"openInCloud": "Roo Code Cloudでタスクを開く",
-		"openInCloudIntro": "どこからでもRooの監視や操作を続けられます。スキャン、クリック、またはコピーして開いてください。",
+		"openInCloud": "CodiDroid Cloudでタスクを開く",
+		"openInCloudIntro": "どこからでもCodiDroidの監視や操作を続けられます。スキャン、クリック、またはコピーして開いてください。",
 		"openApiHistory": "API履歴を開く",
 		"openUiHistory": "UI履歴を開く"
 	},
@@ -87,7 +87,7 @@
 		"tooltip": "現在の操作をキャンセル"
 	},
 	"scrollToBottom": "チャットの最下部にスクロール",
-	"about": "Roo Codeは、エディタに常駐するAI開発チームです。",
+	"about": "CodiDroidは、エディタに常駐するAI開発チームです。",
 	"docs": "詳細については、<DocsLink>ドキュメント</DocsLink>をご確認ください。",
 	"onboarding": "このワークスペースのタスクリストは空です。",
 	"rooTips": {
@@ -116,7 +116,7 @@
 		"title": "モード",
 		"marketplace": "モードマーケットプレイス",
 		"settings": "モード設定",
-		"description": "Rooの動作をカスタマイズする専門的なペルソナ。",
+		"description": "CodiDroidの動作をカスタマイズする専門的なペルソナ。",
 		"searchPlaceholder": "モードを検索...",
 		"noResults": "結果が見つかりません"
 	},
@@ -130,7 +130,7 @@
 	"diffError": {
 		"title": "編集に失敗しました"
 	},
-	"troubleMessage": "Rooに問題が発生しています...",
+	"troubleMessage": "CodiDroidに問題が発生しています...",
 	"apiRequest": {
 		"title": "APIリクエスト",
 		"failed": "APIリクエスト失敗",
@@ -146,7 +146,7 @@
 			"403": "認可されていません。API キーは有効ですが、プロバイダーがこのリクエストの完了を拒否しました。",
 			"429": "リクエストが多すぎます。プロバイダーによってレート制限されています。次の API 呼び出しの前にお待ちください。",
 			"500": "プロバイダー サーバー エラー。プロバイダー側に問題があり、リクエスト自体に問題はありません。",
-			"unknown": "不明な API エラー。Roo Code のサポートにお問い合わせください。"
+			"unknown": "不明な API エラー。CodiDroid のサポートにお問い合わせください。"
 		}
 	},
 	"checkpoint": {
@@ -169,46 +169,46 @@
 		"current": "現在"
 	},
 	"instructions": {
-		"wantsToFetch": "Rooは現在のタスクを支援するための詳細な指示を取得したい"
+		"wantsToFetch": "CodiDroidは現在のタスクを支援するための詳細な指示を取得したい"
 	},
 	"fileOperations": {
-		"wantsToRead": "Rooはこのファイルを読みたい",
-		"wantsToReadOutsideWorkspace": "Rooはワークスペース外のこのファイルを読みたい",
-		"didRead": "Rooはこのファイルを読みました",
-		"wantsToEdit": "Rooはこのファイルを編集したい",
-		"wantsToEditOutsideWorkspace": "Rooはワークスペース外のこのファイルを編集したい",
-		"wantsToEditProtected": "Rooは保護された設定ファイルを編集したい",
-		"wantsToCreate": "Rooは新しいファイルを作成したい",
-		"wantsToSearchReplace": "Rooはこのファイルで検索と置換を行う",
-		"didSearchReplace": "Rooはこのファイルで検索と置換を実行しました",
-		"wantsToInsert": "Rooはこのファイルにコンテンツを挿入したい",
-		"wantsToInsertWithLineNumber": "Rooはこのファイルの{{lineNumber}}行目にコンテンツを挿入したい",
-		"wantsToInsertAtEnd": "Rooはこのファイルの末尾にコンテンツを追加したい",
-		"wantsToReadAndXMore": "Roo はこのファイルと他に {{count}} 個のファイルを読み込もうとしています",
-		"wantsToReadMultiple": "Rooは複数のファイルを読み取ろうとしています",
-		"wantsToApplyBatchChanges": "Rooは複数のファイルに変更を適用したい",
-		"wantsToGenerateImage": "Rooは画像を生成したい",
-		"wantsToGenerateImageOutsideWorkspace": "Rooはワークスペース外で画像を生成したい",
-		"wantsToGenerateImageProtected": "Rooは保護された場所で画像を生成したい",
-		"didGenerateImage": "Rooは画像を生成しました"
+		"wantsToRead": "CodiDroidはこのファイルを読みたい",
+		"wantsToReadOutsideWorkspace": "CodiDroidはワークスペース外のこのファイルを読みたい",
+		"didRead": "CodiDroidはこのファイルを読みました",
+		"wantsToEdit": "CodiDroidはこのファイルを編集したい",
+		"wantsToEditOutsideWorkspace": "CodiDroidはワークスペース外のこのファイルを編集したい",
+		"wantsToEditProtected": "CodiDroidは保護された設定ファイルを編集したい",
+		"wantsToCreate": "CodiDroidは新しいファイルを作成したい",
+		"wantsToSearchReplace": "CodiDroidはこのファイルで検索と置換を行う",
+		"didSearchReplace": "CodiDroidはこのファイルで検索と置換を実行しました",
+		"wantsToInsert": "CodiDroidはこのファイルにコンテンツを挿入したい",
+		"wantsToInsertWithLineNumber": "CodiDroidはこのファイルの{{lineNumber}}行目にコンテンツを挿入したい",
+		"wantsToInsertAtEnd": "CodiDroidはこのファイルの末尾にコンテンツを追加したい",
+		"wantsToReadAndXMore": "CodiDroid はこのファイルと他に {{count}} 個のファイルを読み込もうとしています",
+		"wantsToReadMultiple": "CodiDroidは複数のファイルを読み取ろうとしています",
+		"wantsToApplyBatchChanges": "CodiDroidは複数のファイルに変更を適用したい",
+		"wantsToGenerateImage": "CodiDroidは画像を生成したい",
+		"wantsToGenerateImageOutsideWorkspace": "CodiDroidはワークスペース外で画像を生成したい",
+		"wantsToGenerateImageProtected": "CodiDroidは保護された場所で画像を生成したい",
+		"didGenerateImage": "CodiDroidは画像を生成しました"
 	},
 	"directoryOperations": {
-		"wantsToViewTopLevel": "Rooはこのディレクトリのトップレベルファイルを表示したい",
-		"didViewTopLevel": "Rooはこのディレクトリのトップレベルファイルを表示しました",
-		"wantsToViewRecursive": "Rooはこのディレクトリのすべてのファイルを再帰的に表示したい",
-		"didViewRecursive": "Rooはこのディレクトリのすべてのファイルを再帰的に表示しました",
-		"wantsToViewDefinitions": "Rooはこのディレクトリで使用されているソースコード定義名を表示したい",
-		"didViewDefinitions": "Rooはこのディレクトリで使用されているソースコード定義名を表示しました",
-		"wantsToSearch": "Rooはこのディレクトリで <code>{{regex}}</code> を検索したい",
-		"didSearch": "Rooはこのディレクトリで <code>{{regex}}</code> を検索しました",
-		"wantsToSearchOutsideWorkspace": "Rooはこのディレクトリ（ワークスペース外）で <code>{{regex}}</code> を検索したい",
-		"didSearchOutsideWorkspace": "Rooはこのディレクトリ（ワークスペース外）で <code>{{regex}}</code> を検索しました",
-		"wantsToViewTopLevelOutsideWorkspace": "Rooはこのディレクトリ（ワークスペース外）のトップレベルファイルを表示したい",
-		"didViewTopLevelOutsideWorkspace": "Rooはこのディレクトリ（ワークスペース外）のトップレベルファイルを表示しました",
-		"wantsToViewRecursiveOutsideWorkspace": "Rooはこのディレクトリ（ワークスペース外）のすべてのファイルを再帰的に表示したい",
-		"didViewRecursiveOutsideWorkspace": "Rooはこのディレクトリ（ワークスペース外）のすべてのファイルを再帰的に表示しました",
-		"wantsToViewDefinitionsOutsideWorkspace": "Rooはこのディレクトリ（ワークスペース外）で使用されているソースコード定義名を表示したい",
-		"didViewDefinitionsOutsideWorkspace": "Rooはこのディレクトリ（ワークスペース外）で使用されているソースコード定義名を表示しました"
+		"wantsToViewTopLevel": "CodiDroidはこのディレクトリのトップレベルファイルを表示したい",
+		"didViewTopLevel": "CodiDroidはこのディレクトリのトップレベルファイルを表示しました",
+		"wantsToViewRecursive": "CodiDroidはこのディレクトリのすべてのファイルを再帰的に表示したい",
+		"didViewRecursive": "CodiDroidはこのディレクトリのすべてのファイルを再帰的に表示しました",
+		"wantsToViewDefinitions": "CodiDroidはこのディレクトリで使用されているソースコード定義名を表示したい",
+		"didViewDefinitions": "CodiDroidはこのディレクトリで使用されているソースコード定義名を表示しました",
+		"wantsToSearch": "CodiDroidはこのディレクトリで <code>{{regex}}</code> を検索したい",
+		"didSearch": "CodiDroidはこのディレクトリで <code>{{regex}}</code> を検索しました",
+		"wantsToSearchOutsideWorkspace": "CodiDroidはこのディレクトリ（ワークスペース外）で <code>{{regex}}</code> を検索したい",
+		"didSearchOutsideWorkspace": "CodiDroidはこのディレクトリ（ワークスペース外）で <code>{{regex}}</code> を検索しました",
+		"wantsToViewTopLevelOutsideWorkspace": "CodiDroidはこのディレクトリ（ワークスペース外）のトップレベルファイルを表示したい",
+		"didViewTopLevelOutsideWorkspace": "CodiDroidはこのディレクトリ（ワークスペース外）のトップレベルファイルを表示しました",
+		"wantsToViewRecursiveOutsideWorkspace": "CodiDroidはこのディレクトリ（ワークスペース外）のすべてのファイルを再帰的に表示したい",
+		"didViewRecursiveOutsideWorkspace": "CodiDroidはこのディレクトリ（ワークスペース外）のすべてのファイルを再帰的に表示しました",
+		"wantsToViewDefinitionsOutsideWorkspace": "CodiDroidはこのディレクトリ（ワークスペース外）で使用されているソースコード定義名を表示したい",
+		"didViewDefinitionsOutsideWorkspace": "CodiDroidはこのディレクトリ（ワークスペース外）で使用されているソースコード定義名を表示しました"
 	},
 	"commandOutput": "コマンド出力",
 	"commandExecution": {
@@ -230,24 +230,24 @@
 	"response": "応答",
 	"arguments": "引数",
 	"text": {
-		"rooSaid": "Rooの発言"
+		"rooSaid": "CodiDroidの発言"
 	},
 	"feedback": {
 		"youSaid": "あなたの発言"
 	},
 	"mcp": {
-		"wantsToUseTool": "RooはMCPサーバー{{serverName}}でツールを使用したい",
-		"wantsToAccessResource": "RooはMCPサーバー{{serverName}}のリソースにアクセスしたい"
+		"wantsToUseTool": "CodiDroidはMCPサーバー{{serverName}}でツールを使用したい",
+		"wantsToAccessResource": "CodiDroidはMCPサーバー{{serverName}}のリソースにアクセスしたい"
 	},
 	"modes": {
-		"wantsToSwitch": "Rooは<code>{{mode}}</code>モードに切り替えたい",
-		"wantsToSwitchWithReason": "Rooは次の理由で<code>{{mode}}</code>モードに切り替えたい: {{reason}}",
-		"didSwitch": "Rooは<code>{{mode}}</code>モードに切り替えました",
-		"didSwitchWithReason": "Rooは次の理由で<code>{{mode}}</code>モードに切り替えました: {{reason}}"
+		"wantsToSwitch": "CodiDroidは<code>{{mode}}</code>モードに切り替えたい",
+		"wantsToSwitchWithReason": "CodiDroidは次の理由で<code>{{mode}}</code>モードに切り替えたい: {{reason}}",
+		"didSwitch": "CodiDroidは<code>{{mode}}</code>モードに切り替えました",
+		"didSwitchWithReason": "CodiDroidは次の理由で<code>{{mode}}</code>モードに切り替えました: {{reason}}"
 	},
 	"subtasks": {
-		"wantsToCreate": "Rooは<code>{{mode}}</code>モードで新しいサブタスクを作成したい",
-		"wantsToFinish": "Rooはこのサブタスクを終了したい",
+		"wantsToCreate": "CodiDroidは<code>{{mode}}</code>モードで新しいサブタスクを作成したい",
+		"wantsToFinish": "CodiDroidはこのサブタスクを終了したい",
 		"newTaskContent": "サブタスク指示",
 		"completionContent": "サブタスク完了",
 		"resultContent": "サブタスク結果",
@@ -255,7 +255,7 @@
 		"completionInstructions": "サブタスク完了！結果を確認し、修正や次のステップを提案できます。問題なければ、親タスクに結果を返すために確認してください。"
 	},
 	"questions": {
-		"hasQuestion": "Rooは質問があります"
+		"hasQuestion": "CodiDroidは質問があります"
 	},
 	"taskCompleted": "タスク完了",
 	"powershell": {
@@ -304,18 +304,18 @@
 		"countdownDisplay": "{{count}}秒"
 	},
 	"announcement": {
-		"title": "🎉 Roo Code {{version}} リリース",
+		"title": "🎉 CodiDroid {{version}} リリース",
 		"stealthModel": {
-			"feature": "<bold>期間限定無料ステルスモデル</bold> - Code Supernova：<bold>1Mトークンコンテキストウィンドウ</bold>にアップグレード！画像入力をサポートする多目的エージェントコーディングモデル、Roo Code Cloud 経由で利用可能。",
+			"feature": "<bold>期間限定無料ステルスモデル</bold> - Code Supernova：<bold>1Mトークンコンテキストウィンドウ</bold>にアップグレード！画像入力をサポートする多目的エージェントコーディングモデル、CodiDroid Cloud 経由で利用可能。",
 			"note": "(注意：プロンプトと補完はモデル作成者によってログに記録され、モデルの改善に使用されます)",
-			"connectButton": "Roo Code Cloud に接続",
-			"selectModel": "設定で Roo Code Cloud プロバイダーから <code>roo/code-supernova</code> を選択して開始してください。",
+			"connectButton": "CodiDroid Cloud に接続",
+			"selectModel": "設定で CodiDroid Cloud プロバイダーから <code>roo/code-supernova</code> を選択して開始してください。",
 			"goToSettingsButton": "設定に移動"
 		},
 		"release": {
 			"heading": "このバージョンの新機能:",
 			"contextRewind": "改善されたコンテキスト圧縮により、チェックポイントに巻き戻すときに以前の完全なコンテキストを復元できるようになりました",
-			"rooProvider": "Roo Code Cloud プロバイダーはレジーニングコンテンツを保持し、デフォルトでネイティブ ツールを使用してパフォーマンスを向上させます"
+			"rooProvider": "CodiDroid Cloud プロバイダーはレジーニングコンテンツを保持し、デフォルトでネイティブ ツールを使用してパフォーマンスを向上させます"
 		},
 		"cloudAgents": {
 			"heading": "クラウドの新機能:",
@@ -328,7 +328,7 @@
 	},
 	"browser": {
 		"session": "ブラウザセッション",
-		"rooWantsToUse": "Rooはブラウザを使用したい",
+		"rooWantsToUse": "CodiDroidはブラウザを使用したい",
 		"consoleLogs": "コンソールログ",
 		"noNewLogs": "(新しいログはありません)",
 		"screenshot": "ブラウザのスクリーンショット",
@@ -362,24 +362,24 @@
 	"profileViolationWarning": "現在のプロファイルは組織の設定と互換性がありません",
 	"shellIntegration": {
 		"title": "コマンド実行警告",
-		"description": "コマンドはVSCodeターミナルシェル統合なしで実行されています。この警告を非表示にするには、<settingsLink>Roo Code設定</settingsLink>の<strong>Terminal</strong>セクションでシェル統合を無効にするか、以下のリンクを使用してVSCodeターミナル統合のトラブルシューティングを行ってください。",
+		"description": "コマンドはVSCodeターミナルシェル統合なしで実行されています。この警告を非表示にするには、<settingsLink>CodiDroid設定</settingsLink>の<strong>Terminal</strong>セクションでシェル統合を無効にするか、以下のリンクを使用してVSCodeターミナル統合のトラブルシューティングを行ってください。",
 		"troubleshooting": "シェル統合のドキュメントはこちらをクリック"
 	},
 	"ask": {
 		"autoApprovedRequestLimitReached": {
 			"title": "自動承認リクエスト制限に達しました",
-			"description": "Rooは{{count}}件のAPI自動承認リクエスト制限に達しました。カウントをリセットしてタスクを続行しますか？",
+			"description": "CodiDroidは{{count}}件のAPI自動承認リクエスト制限に達しました。カウントをリセットしてタスクを続行しますか？",
 			"button": "リセットして続行"
 		},
 		"autoApprovedCostLimitReached": {
 			"title": "自動承認コスト制限に達しました",
-			"description": "Rooは自動承認されたコスト制限の${{count}}に達しました。コストをリセットしてタスクを続行しますか？",
+			"description": "CodiDroidは自動承認されたコスト制限の${{count}}に達しました。コストをリセットしてタスクを続行しますか？",
 			"button": "リセットして続ける"
 		}
 	},
 	"codebaseSearch": {
-		"wantsToSearch": "Rooはコードベースで <code>{{query}}</code> を検索したい",
-		"wantsToSearchWithPath": "Rooは <code>{{path}}</code> 内のコードベースで <code>{{query}}</code> を検索したい",
+		"wantsToSearch": "CodiDroidはコードベースで <code>{{query}}</code> を検索したい",
+		"wantsToSearchWithPath": "CodiDroidは <code>{{path}}</code> 内のコードベースで <code>{{query}}</code> を検索したい",
 		"didSearch_one": "1件の結果が見つかりました",
 		"didSearch_other": "{{count}}件の結果が見つかりました",
 		"resultTooltip": "類似度スコア: {{score}} (クリックしてファイルを開く)"
@@ -403,7 +403,7 @@
 		"ariaLabel": "バージョン {{version}} - クリックしてリリースノートを表示"
 	},
 	"rooCloudCTA": {
-		"title": "Roo Code Cloud が進化中！",
+		"title": "CodiDroid Cloud が進化中！",
 		"description": "クラウドでリモートエージェントを実行し、どこからでもタスクにアクセスし、他の人と協力し、その他多くの機能を利用できます。",
 		"joinWaitlist": "最新のアップデートを受け取るためにサインアップしてください。"
 	},
@@ -444,8 +444,8 @@
 		"clickToEdit": "クリックしてメッセージを編集"
 	},
 	"slashCommand": {
-		"wantsToRun": "Rooはスラッシュコマンドを実行したい",
-		"didRun": "Rooはスラッシュコマンドを実行しました"
+		"wantsToRun": "CodiDroidはスラッシュコマンドを実行したい",
+		"didRun": "CodiDroidはスラッシュコマンドを実行しました"
 	},
 	"todo": {
 		"partial": "{{total}}件中{{completed}}件のTo-Doが完了",

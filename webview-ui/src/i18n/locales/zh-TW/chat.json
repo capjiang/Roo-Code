@@ -1,5 +1,5 @@
 {
-	"greeting": "歡迎使用 Roo Code！",
+	"greeting": "歡迎使用 CodiDroid！",
 	"task": {
 		"title": "工作",
 		"expand": "展開工作",
@@ -21,12 +21,12 @@
 		"sharePublicly": "公開分享",
 		"sharePubliclyDescription": "任何擁有連結的人都可存取",
 		"connectToCloud": "連線至雲端",
-		"connectToCloudDescription": "登入 Roo Code Cloud 以分享工作",
+		"connectToCloudDescription": "登入 CodiDroid Cloud 以分享工作",
 		"sharingDisabledByOrganization": "組織已停用分享功能",
 		"shareSuccessOrganization": "組織連結已複製到剪貼簿",
 		"shareSuccessPublic": "公開連結已複製到剪貼簿",
-		"openInCloud": "在 Roo Code Cloud 中開啟工作",
-		"openInCloudIntro": "從任何地方繼續監控或與 Roo 互動。掃描、點擊或複製以開啟。",
+		"openInCloud": "在 CodiDroid Cloud 中開啟工作",
+		"openInCloudIntro": "從任何地方繼續監控或與 CodiDroid 互動。掃描、點擊或複製以開啟。",
 		"openApiHistory": "開啟 API 歷史紀錄",
 		"openUiHistory": "開啟 UI 歷史紀錄"
 	},
@@ -98,7 +98,7 @@
 		"placeholder": "編輯您的訊息..."
 	},
 	"scrollToBottom": "捲動至聊天室底部",
-	"about": "Roo Code 是您編輯器中的整個 AI 開發團隊。",
+	"about": "CodiDroid 是您編輯器中的整個 AI 開發團隊。",
 	"docs": "請參閱我們的<DocsLink>說明文件</DocsLink>以了解詳細資訊。",
 	"onboarding": "此工作區的工作清單是空的。",
 	"rooTips": {
@@ -118,7 +118,7 @@
 		"title": "模式",
 		"marketplace": "模式市集",
 		"settings": "模式設定",
-		"description": "專門量身打造 Roo 行為的角色。",
+		"description": "專門量身打造 CodiDroid 行為的角色。",
 		"searchPlaceholder": "搜尋模式...",
 		"noResults": "沒有找到結果"
 	},
@@ -152,7 +152,7 @@
 			"403": "無權存取。您的 API 金鑰有效，但提供商拒絕完成此請求。",
 			"429": "請求次數過多。提供商已對您的請求進行速率限制。請在下一次 API 呼叫前稍候。",
 			"500": "提供商伺服器錯誤。提供商端發生問題，您的請求沒有問題。",
-			"unknown": "未知 API 錯誤。請聯絡 Roo Code 支援。"
+			"unknown": "未知 API 錯誤。請聯絡 CodiDroid 支援。"
 		}
 	},
 	"checkpoint": {
@@ -190,50 +190,50 @@
 		}
 	},
 	"instructions": {
-		"wantsToFetch": "Roo 想要取得詳細指示以協助目前工作"
+		"wantsToFetch": "CodiDroid 想要取得詳細指示以協助目前工作"
 	},
 	"fileOperations": {
-		"wantsToRead": "Roo 想要讀取此檔案",
-		"wantsToReadMultiple": "Roo 想要讀取多個檔案",
-		"wantsToReadAndXMore": "Roo 想要讀取此檔案以及另外 {{count}} 個檔案",
-		"wantsToReadOutsideWorkspace": "Roo 想要讀取此工作區外的檔案",
-		"didRead": "Roo 已讀取此檔案",
-		"wantsToEdit": "Roo 想要編輯此檔案",
-		"wantsToEditOutsideWorkspace": "Roo 想要編輯此工作區外的檔案",
-		"wantsToEditProtected": "Roo 想要編輯受保護的設定檔案",
-		"wantsToApplyBatchChanges": "Roo 想要對多個檔案套用變更",
-		"wantsToGenerateImage": "Roo 想要產生圖片",
-		"wantsToGenerateImageOutsideWorkspace": "Roo 想要在工作區外產生圖片",
-		"wantsToGenerateImageProtected": "Roo 想要在受保護位置產生圖片",
-		"didGenerateImage": "Roo 已產生圖片",
-		"wantsToCreate": "Roo 想要建立新檔案",
-		"wantsToSearchReplace": "Roo 想要在此檔案中搜尋和取代",
-		"didSearchReplace": "Roo 已在此檔案執行搜尋和取代",
-		"wantsToInsert": "Roo 想要在此檔案中插入內容",
-		"wantsToInsertWithLineNumber": "Roo 想要在此檔案第 {{lineNumber}} 行插入內容",
-		"wantsToInsertAtEnd": "Roo 想要在此檔案尾端新增內容"
+		"wantsToRead": "CodiDroid 想要讀取此檔案",
+		"wantsToReadMultiple": "CodiDroid 想要讀取多個檔案",
+		"wantsToReadAndXMore": "CodiDroid 想要讀取此檔案以及另外 {{count}} 個檔案",
+		"wantsToReadOutsideWorkspace": "CodiDroid 想要讀取此工作區外的檔案",
+		"didRead": "CodiDroid 已讀取此檔案",
+		"wantsToEdit": "CodiDroid 想要編輯此檔案",
+		"wantsToEditOutsideWorkspace": "CodiDroid 想要編輯此工作區外的檔案",
+		"wantsToEditProtected": "CodiDroid 想要編輯受保護的設定檔案",
+		"wantsToApplyBatchChanges": "CodiDroid 想要對多個檔案套用變更",
+		"wantsToGenerateImage": "CodiDroid 想要產生圖片",
+		"wantsToGenerateImageOutsideWorkspace": "CodiDroid 想要在工作區外產生圖片",
+		"wantsToGenerateImageProtected": "CodiDroid 想要在受保護位置產生圖片",
+		"didGenerateImage": "CodiDroid 已產生圖片",
+		"wantsToCreate": "CodiDroid 想要建立新檔案",
+		"wantsToSearchReplace": "CodiDroid 想要在此檔案中搜尋和取代",
+		"didSearchReplace": "CodiDroid 已在此檔案執行搜尋和取代",
+		"wantsToInsert": "CodiDroid 想要在此檔案中插入內容",
+		"wantsToInsertWithLineNumber": "CodiDroid 想要在此檔案第 {{lineNumber}} 行插入內容",
+		"wantsToInsertAtEnd": "CodiDroid 想要在此檔案尾端新增內容"
 	},
 	"directoryOperations": {
-		"wantsToViewTopLevel": "Roo 想要檢視此目錄中最上層的檔案",
-		"didViewTopLevel": "Roo 已檢視此目錄中最上層的檔案",
-		"wantsToViewTopLevelOutsideWorkspace": "Roo 想要檢視此目錄（工作區外）中最上層的檔案",
-		"didViewTopLevelOutsideWorkspace": "Roo 已檢視此目錄（工作區外）中最上層的檔案",
-		"wantsToViewRecursive": "Roo 想要遞迴檢視此目錄中的所有檔案",
-		"didViewRecursive": "Roo 已遞迴檢視此目錄中的所有檔案",
-		"wantsToViewRecursiveOutsideWorkspace": "Roo 想要遞迴檢視此目錄（工作區外）中的所有檔案",
-		"didViewRecursiveOutsideWorkspace": "Roo 已遞迴檢視此目錄（工作區外）中的所有檔案",
-		"wantsToViewDefinitions": "Roo 想要檢視此目錄中使用的原始碼定義名稱",
-		"didViewDefinitions": "Roo 已檢視此目錄中使用的原始碼定義名稱",
-		"wantsToViewDefinitionsOutsideWorkspace": "Roo 想要檢視此目錄（工作區外）中使用的原始碼定義名稱",
-		"didViewDefinitionsOutsideWorkspace": "Roo 已檢視此目錄（工作區外）中使用的原始碼定義名稱",
-		"wantsToSearch": "Roo 想要在此目錄中搜尋 <code>{{regex}}</code>",
-		"didSearch": "Roo 已在此目錄中搜尋 <code>{{regex}}</code>",
-		"wantsToSearchOutsideWorkspace": "Roo 想要在此目錄（工作區外）中搜尋 <code>{{regex}}</code>",
-		"didSearchOutsideWorkspace": "Roo 已在此目錄（工作區外）中搜尋 <code>{{regex}}</code>"
+		"wantsToViewTopLevel": "CodiDroid 想要檢視此目錄中最上層的檔案",
+		"didViewTopLevel": "CodiDroid 已檢視此目錄中最上層的檔案",
+		"wantsToViewTopLevelOutsideWorkspace": "CodiDroid 想要檢視此目錄（工作區外）中最上層的檔案",
+		"didViewTopLevelOutsideWorkspace": "CodiDroid 已檢視此目錄（工作區外）中最上層的檔案",
+		"wantsToViewRecursive": "CodiDroid 想要遞迴檢視此目錄中的所有檔案",
+		"didViewRecursive": "CodiDroid 已遞迴檢視此目錄中的所有檔案",
+		"wantsToViewRecursiveOutsideWorkspace": "CodiDroid 想要遞迴檢視此目錄（工作區外）中的所有檔案",
+		"didViewRecursiveOutsideWorkspace": "CodiDroid 已遞迴檢視此目錄（工作區外）中的所有檔案",
+		"wantsToViewDefinitions": "CodiDroid 想要檢視此目錄中使用的原始碼定義名稱",
+		"didViewDefinitions": "CodiDroid 已檢視此目錄中使用的原始碼定義名稱",
+		"wantsToViewDefinitionsOutsideWorkspace": "CodiDroid 想要檢視此目錄（工作區外）中使用的原始碼定義名稱",
+		"didViewDefinitionsOutsideWorkspace": "CodiDroid 已檢視此目錄（工作區外）中使用的原始碼定義名稱",
+		"wantsToSearch": "CodiDroid 想要在此目錄中搜尋 <code>{{regex}}</code>",
+		"didSearch": "CodiDroid 已在此目錄中搜尋 <code>{{regex}}</code>",
+		"wantsToSearchOutsideWorkspace": "CodiDroid 想要在此目錄（工作區外）中搜尋 <code>{{regex}}</code>",
+		"didSearchOutsideWorkspace": "CodiDroid 已在此目錄（工作區外）中搜尋 <code>{{regex}}</code>"
 	},
 	"codebaseSearch": {
-		"wantsToSearch": "Roo 想要在程式碼庫中搜尋 <code>{{query}}</code>",
-		"wantsToSearchWithPath": "Roo 想要在 <code>{{path}}</code> 中搜尋程式碼庫 <code>{{query}}</code>",
+		"wantsToSearch": "CodiDroid 想要在程式碼庫中搜尋 <code>{{query}}</code>",
+		"wantsToSearchWithPath": "CodiDroid 想要在 <code>{{path}}</code> 中搜尋程式碼庫 <code>{{query}}</code>",
 		"didSearch_one": "找到 1 個結果",
 		"didSearch_other": "找到 {{count}} 個結果",
 		"resultTooltip": "相似度評分：{{score}} (點選開啟檔案)"
@@ -259,24 +259,24 @@
 	"response": "回應",
 	"arguments": "參數",
 	"text": {
-		"rooSaid": "Roo 說"
+		"rooSaid": "CodiDroid 說"
 	},
 	"feedback": {
 		"youSaid": "您說"
 	},
 	"mcp": {
-		"wantsToUseTool": "Roo 想要在 {{serverName}} MCP 伺服器上使用工具",
-		"wantsToAccessResource": "Roo 想要存取 {{serverName}} MCP 伺服器上的資源"
+		"wantsToUseTool": "CodiDroid 想要在 {{serverName}} MCP 伺服器上使用工具",
+		"wantsToAccessResource": "CodiDroid 想要存取 {{serverName}} MCP 伺服器上的資源"
 	},
 	"modes": {
-		"wantsToSwitch": "Roo 想要切換至 {{mode}} 模式",
-		"wantsToSwitchWithReason": "Roo 想要切換至 {{mode}} 模式，原因：{{reason}}",
-		"didSwitch": "Roo 已切換至 {{mode}} 模式",
-		"didSwitchWithReason": "Roo 已切換至 {{mode}} 模式，原因：{{reason}}"
+		"wantsToSwitch": "CodiDroid 想要切換至 {{mode}} 模式",
+		"wantsToSwitchWithReason": "CodiDroid 想要切換至 {{mode}} 模式，原因：{{reason}}",
+		"didSwitch": "CodiDroid 已切換至 {{mode}} 模式",
+		"didSwitchWithReason": "CodiDroid 已切換至 {{mode}} 模式，原因：{{reason}}"
 	},
 	"subtasks": {
-		"wantsToCreate": "Roo 想要在 {{mode}} 模式下建立新的子工作",
-		"wantsToFinish": "Roo 想要完成此子工作",
+		"wantsToCreate": "CodiDroid 想要在 {{mode}} 模式下建立新的子工作",
+		"wantsToFinish": "CodiDroid 想要完成此子工作",
 		"newTaskContent": "子工作指示",
 		"completionContent": "子工作已完成",
 		"resultContent": "子工作結果",
@@ -284,14 +284,14 @@
 		"completionInstructions": "子工作已完成！您可以檢閱結果並提出修正或後續步驟。如果一切順利，請確認以將結果回傳給主任務。"
 	},
 	"questions": {
-		"hasQuestion": "Roo 有一個問題"
+		"hasQuestion": "CodiDroid 有一個問題"
 	},
 	"taskCompleted": "工作完成",
 	"error": "錯誤",
 	"diffError": {
 		"title": "編輯失敗"
 	},
-	"troubleMessage": "Roo 遇到問題...",
+	"troubleMessage": "CodiDroid 遇到問題...",
 	"powershell": {
 		"issues": "您似乎遇到了 Windows PowerShell 的問題，請參閱此說明文件"
 	},
@@ -314,18 +314,18 @@
 		"triggerLabelAll": "YOLO"
 	},
 	"announcement": {
-		"title": "🎉 Roo Code {{version}} 已發布",
+		"title": "🎉 CodiDroid {{version}} 已發布",
 		"stealthModel": {
-			"feature": "<bold>限時免費隱形模型</bold> - Code Supernova：現已升級為 <bold>1M Token 上下文視窗</bold>！一個支援圖像輸入的多功能代理程式編程模型，透過 Roo Code Cloud 提供。",
+			"feature": "<bold>限時免費隱形模型</bold> - Code Supernova：現已升級為 <bold>1M Token 上下文視窗</bold>！一個支援圖像輸入的多功能代理程式編程模型，透過 CodiDroid Cloud 提供。",
 			"note": "(注意：提示和完成會被模型創建者記錄並用於改進模型)",
-			"connectButton": "連接到 Roo Code Cloud",
-			"selectModel": "在設定中從 Roo Code Cloud 提供商選擇 <code>roo/code-supernova</code> 開始使用。",
+			"connectButton": "連接到 CodiDroid Cloud",
+			"selectModel": "在設定中從 CodiDroid Cloud 提供商選擇 <code>roo/code-supernova</code> 開始使用。",
 			"goToSettingsButton": "前往設定"
 		},
 		"release": {
 			"heading": "最新功能：",
 			"contextRewind": "改進的上下文壓縮現在允許您在回到存檔點時恢復完整的先前上下文",
-			"rooProvider": "Roo Code Cloud 提供商現在保留推理內容，並預設使用原生工具以獲得更佳效能"
+			"rooProvider": "CodiDroid Cloud 提供商現在保留推理內容，並預設使用原生工具以獲得更佳效能"
 		},
 		"cloudAgents": {
 			"heading": "雲端的新功能：",
@@ -347,7 +347,7 @@
 	},
 	"browser": {
 		"session": "瀏覽器會話",
-		"rooWantsToUse": "Roo 想要使用瀏覽器",
+		"rooWantsToUse": "CodiDroid 想要使用瀏覽器",
 		"consoleLogs": "主控台記錄",
 		"noNewLogs": "（沒有新記錄）",
 		"screenshot": "瀏覽器螢幕擷圖",
@@ -381,18 +381,18 @@
 	"profileViolationWarning": "目前設定檔與您的組織設定不相容",
 	"shellIntegration": {
 		"title": "命令執行警告",
-		"description": "您的命令正在沒有 VSCode 終端機 Shell 整合的情況下執行。若要隱藏此警告，您可以在 <settingsLink>Roo Code 設定</settingsLink> 的<strong>終端機</strong>區塊中停用 Shell 整合，或使用下方的連結來排解 VSCode 終端機整合問題。",
+		"description": "您的命令正在沒有 VSCode 終端機 Shell 整合的情況下執行。若要隱藏此警告，您可以在 <settingsLink>CodiDroid 設定</settingsLink> 的<strong>終端機</strong>區塊中停用 Shell 整合，或使用下方的連結來排解 VSCode 終端機整合問題。",
 		"troubleshooting": "點選此處查看 Shell 整合文件。"
 	},
 	"ask": {
 		"autoApprovedRequestLimitReached": {
 			"title": "已達自動核准請求上限",
-			"description": "Roo 已達到 {{count}} 次 API 請求的自動核准上限。您想重設計數並繼續工作嗎？",
+			"description": "CodiDroid 已達到 {{count}} 次 API 請求的自動核准上限。您想重設計數並繼續工作嗎？",
 			"button": "重設並繼續"
 		},
 		"autoApprovedCostLimitReached": {
 			"title": "已達自動核准費用上限",
-			"description": "Roo 已達到 ${{count}} 的自動核准費用上限。您想重設費用並繼續工作嗎？",
+			"description": "CodiDroid 已達到 ${{count}} 的自動核准費用上限。您想重設費用並繼續工作嗎？",
 			"button": "重設並繼續"
 		}
 	},
@@ -407,7 +407,7 @@
 		"ariaLabel": "版本 {{version}} - 點選查看發布說明"
 	},
 	"rooCloudCTA": {
-		"title": "Roo Code Cloud 正在進化！",
+		"title": "CodiDroid Cloud 正在進化！",
 		"description": "在雲端執行 Roomote 遠端代理、隨時隨地存取您的工作、與他人協作等等。",
 		"joinWaitlist": "註冊以獲得最新更新。"
 	},
@@ -445,8 +445,8 @@
 		"clickToEdit": "點選以編輯訊息"
 	},
 	"slashCommand": {
-		"wantsToRun": "Roo 想要執行斜線指令",
-		"didRun": "Roo 執行了斜線指令"
+		"wantsToRun": "CodiDroid 想要執行斜線指令",
+		"didRun": "CodiDroid 執行了斜線指令"
 	},
 	"todo": {
 		"partial": "已完成 {{completed}} / {{total}} 個待辦事項",

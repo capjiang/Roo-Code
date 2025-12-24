@@ -80,7 +80,7 @@ vitest.mock("@roo-code/cloud", () => ({
 vitest.mock("../../../i18n", () => ({
 	t: vitest.fn((key: string) => {
 		if (key === "common:errors.roo.authenticationRequired") {
-			return "Authentication required for Roo Code Cloud"
+			return "Authentication required for CodiDroid Cloud"
 		}
 		return key
 	}),
@@ -352,7 +352,7 @@ describe("RooHandler", () => {
 		it("should handle API errors", async () => {
 			mockCreate.mockRejectedValueOnce(new Error("API Error"))
 			await expect(handler.completePrompt("Test prompt")).rejects.toThrow(
-				"Roo Code Cloud completion error: API Error",
+				"CodiDroid Cloud completion error: API Error",
 			)
 		})
 

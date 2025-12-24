@@ -9,9 +9,9 @@ vi.mock("@src/i18n/TranslationContext", () => ({
 			const translations: Record<string, string> = {
 				"cloud:title": "Cloud",
 				"settings:common.done": "Done",
-				"cloud:signIn": "Connect to Roo Code Cloud",
-				"cloud:cloudBenefitsTitle": "Try Roo Code Cloud",
-				"cloud:cloudBenefitProvider": "Access free and paid models that work great with Roo",
+				"cloud:signIn": "Connect to CodiDroid Cloud",
+				"cloud:cloudBenefitsTitle": "Try CodiDroid Cloud",
+				"cloud:cloudBenefitProvider": "Access free and paid models that work great with CodiDroid",
 				"cloud:cloudBenefitCloudAgents": "Give tasks to autonomous Cloud agents",
 				"cloud:cloudBenefitTriggers": "Get code reviews on Github, start tasks from Slack and more",
 				"cloud:cloudBenefitWalkaway": "Follow and control tasks from anywhere (including your phone)",
@@ -19,17 +19,17 @@ vi.mock("@src/i18n/TranslationContext", () => ({
 				"cloud:cloudBenefitMetrics": "Get a holistic view of your token consumption",
 				"cloud:logOut": "Log out",
 				"cloud:connect": "Get started",
-				"cloud:visitCloudWebsite": "Visit Roo Code Cloud",
+				"cloud:visitCloudWebsite": "Visit CodiDroid Cloud",
 				"cloud:taskSync": "Task sync",
-				"cloud:taskSyncDescription": "Sync your tasks for viewing and sharing on Roo Code Cloud",
+				"cloud:taskSyncDescription": "Sync your tasks for viewing and sharing on CodiDroid Cloud",
 				"cloud:taskSyncManagedByOrganization": "Task sync is managed by your organization",
 				"cloud:remoteControl": "Roomote Control",
 				"cloud:remoteControlDescription":
-					"Enable following and interacting with tasks in this workspace with Roo Code Cloud",
+					"Enable following and interacting with tasks in this workspace with CodiDroid Cloud",
 				"cloud:remoteControlRequiresTaskSync": "Task sync must be enabled to use Roomote Control",
 				"cloud:usageMetricsAlwaysReported": "Model usage info is always reported when logged in",
 				"cloud:profilePicture": "Profile picture",
-				"cloud:cloudUrlPillLabel": "Roo Code Cloud URL: ",
+				"cloud:cloudUrlPillLabel": "CodiDroid Cloud URL: ",
 			}
 			return translations[key] || key
 		},
@@ -75,8 +75,8 @@ describe("CloudView", () => {
 		render(<CloudView userInfo={null} isAuthenticated={false} cloudApiUrl="https://app.roocode.com" />)
 
 		// Check that the benefits section is displayed
-		expect(screen.getByRole("heading", { name: "Try Roo Code Cloud" })).toBeInTheDocument()
-		expect(screen.getByText("Access free and paid models that work great with Roo")).toBeInTheDocument()
+		expect(screen.getByRole("heading", { name: "Try CodiDroid Cloud" })).toBeInTheDocument()
+		expect(screen.getByText("Access free and paid models that work great with CodiDroid")).toBeInTheDocument()
 		expect(screen.getByText("Give tasks to autonomous Cloud agents")).toBeInTheDocument()
 		expect(screen.getByText("Get code reviews on Github, start tasks from Slack and more")).toBeInTheDocument()
 		expect(screen.getByText("Follow and control tasks from anywhere (including your phone)")).toBeInTheDocument()
@@ -129,7 +129,7 @@ describe("CloudView", () => {
 		expect(screen.getByTestId("remote-control-toggle")).toBeInTheDocument()
 		expect(screen.getByText("Roomote Control")).toBeInTheDocument()
 		expect(
-			screen.getByText("Enable following and interacting with tasks in this workspace with Roo Code Cloud"),
+			screen.getByText("Enable following and interacting with tasks in this workspace with CodiDroid Cloud"),
 		).toBeInTheDocument()
 	})
 
@@ -201,7 +201,7 @@ describe("CloudView", () => {
 		render(<CloudView userInfo={mockUserInfo} isAuthenticated={true} cloudApiUrl="https://app.roocode.com" />)
 
 		// Check that the cloud URL pill is NOT displayed for production URL
-		expect(screen.queryByText(/Roo Code Cloud URL:/)).not.toBeInTheDocument()
+		expect(screen.queryByText(/CodiDroid Cloud URL:/)).not.toBeInTheDocument()
 	})
 
 	it("should display cloud URL pill when pointing to non-production environment", () => {
@@ -213,7 +213,7 @@ describe("CloudView", () => {
 		render(<CloudView userInfo={mockUserInfo} isAuthenticated={true} cloudApiUrl="https://staging.roocode.com" />)
 
 		// Check that the cloud URL pill is displayed with the staging URL
-		expect(screen.getByText(/Roo Code Cloud URL:/)).toBeInTheDocument()
+		expect(screen.getByText(/CodiDroid Cloud URL:/)).toBeInTheDocument()
 		expect(screen.getByText("https://staging.roocode.com")).toBeInTheDocument()
 	})
 
@@ -221,7 +221,7 @@ describe("CloudView", () => {
 		render(<CloudView userInfo={null} isAuthenticated={false} cloudApiUrl="https://dev.roocode.com" />)
 
 		// Check that the cloud URL pill is displayed even when not authenticated
-		expect(screen.getByText(/Roo Code Cloud URL:/)).toBeInTheDocument()
+		expect(screen.getByText(/CodiDroid Cloud URL:/)).toBeInTheDocument()
 		expect(screen.getByText("https://dev.roocode.com")).toBeInTheDocument()
 	})
 
@@ -234,7 +234,7 @@ describe("CloudView", () => {
 		render(<CloudView userInfo={mockUserInfo} isAuthenticated={true} />)
 
 		// Check that the cloud URL pill is NOT displayed when cloudApiUrl is undefined
-		expect(screen.queryByText(/Roo Code Cloud URL:/)).not.toBeInTheDocument()
+		expect(screen.queryByText(/CodiDroid Cloud URL:/)).not.toBeInTheDocument()
 	})
 
 	it("should disable task sync toggle for organization users", () => {

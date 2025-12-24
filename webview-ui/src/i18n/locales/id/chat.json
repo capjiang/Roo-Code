@@ -1,5 +1,5 @@
 {
-	"greeting": "Selamat datang di Roo Code",
+	"greeting": "Selamat datang di CodiDroid",
 	"task": {
 		"title": "Tugas",
 		"expand": "Perluas tugas",
@@ -21,12 +21,12 @@
 		"sharePublicly": "Bagikan secara publik",
 		"sharePubliclyDescription": "Siapa pun dengan tautan dapat mengakses",
 		"connectToCloud": "Hubungkan ke Cloud",
-		"connectToCloudDescription": "Masuk ke Roo Code Cloud untuk berbagi tugas",
+		"connectToCloudDescription": "Masuk ke CodiDroid Cloud untuk berbagi tugas",
 		"sharingDisabledByOrganization": "Berbagi dinonaktifkan oleh organisasi",
 		"shareSuccessOrganization": "Tautan organisasi disalin ke clipboard",
 		"shareSuccessPublic": "Tautan publik disalin ke clipboard",
-		"openInCloud": "Buka tugas di Roo Code Cloud",
-		"openInCloudIntro": "Terus pantau atau berinteraksi dengan Roo dari mana saja. Pindai, klik atau salin untuk membuka.",
+		"openInCloud": "Buka tugas di CodiDroid Cloud",
+		"openInCloudIntro": "Terus pantau atau berinteraksi dengan CodiDroid dari mana saja. Pindai, klik atau salin untuk membuka.",
 		"openApiHistory": "Buka Riwayat API",
 		"openUiHistory": "Buka Riwayat UI"
 	},
@@ -101,7 +101,7 @@
 		"tooltip": "Batalkan operasi saat ini"
 	},
 	"scrollToBottom": "Gulir ke bawah chat",
-	"about": "Roo Code adalah seluruh tim pengembang AI di editor Anda.",
+	"about": "CodiDroid adalah seluruh tim pengembang AI di editor Anda.",
 	"docs": "Lihat <DocsLink>dokumentasi</DocsLink> kami untuk mempelajari lebih lanjut.",
 	"onboarding": "Daftar tugas Anda di ruang kerja ini kosong.",
 	"rooTips": {
@@ -122,7 +122,7 @@
 		"title": "Mode",
 		"marketplace": "Marketplace Mode",
 		"settings": "Pengaturan Mode",
-		"description": "Persona khusus yang menyesuaikan perilaku Roo.",
+		"description": "Persona khusus yang menyesuaikan perilaku CodiDroid.",
 		"searchPlaceholder": "Cari mode...",
 		"noResults": "Tidak ada hasil yang ditemukan"
 	},
@@ -155,7 +155,7 @@
 			"403": "Tidak sah. Kunci API Anda valid, tetapi penyedia menolak untuk menyelesaikan permintaan ini.",
 			"429": "Terlalu banyak permintaan. Anda dibatasi tingkat oleh penyedia. Harap tunggu sebentar sebelum panggilan API berikutnya Anda.",
 			"500": "Kesalahan server penyedia. Ada yang salah di sisi penyedia, tidak ada yang salah dengan permintaan Anda.",
-			"unknown": "Kesalahan API yang tidak diketahui. Harap hubungi dukungan Roo Code."
+			"unknown": "Kesalahan API yang tidak diketahui. Harap hubungi dukungan CodiDroid."
 		}
 	},
 	"checkpoint": {
@@ -193,50 +193,50 @@
 		}
 	},
 	"instructions": {
-		"wantsToFetch": "Roo ingin mengambil instruksi detail untuk membantu tugas saat ini"
+		"wantsToFetch": "CodiDroid ingin mengambil instruksi detail untuk membantu tugas saat ini"
 	},
 	"fileOperations": {
-		"wantsToRead": "Roo ingin membaca file ini",
-		"wantsToReadMultiple": "Roo ingin membaca beberapa file",
-		"wantsToReadAndXMore": "Roo ingin membaca file ini dan {{count}} lainnya",
-		"wantsToReadOutsideWorkspace": "Roo ingin membaca file ini di luar workspace",
-		"didRead": "Roo membaca file ini",
-		"wantsToEdit": "Roo ingin mengedit file ini",
-		"wantsToEditOutsideWorkspace": "Roo ingin mengedit file ini di luar workspace",
-		"wantsToEditProtected": "Roo ingin mengedit file konfigurasi yang dilindungi",
-		"wantsToApplyBatchChanges": "Roo ingin menerapkan perubahan ke beberapa file",
-		"wantsToGenerateImage": "Roo ingin menghasilkan gambar",
-		"wantsToGenerateImageOutsideWorkspace": "Roo ingin menghasilkan gambar di luar workspace",
-		"wantsToGenerateImageProtected": "Roo ingin menghasilkan gambar di lokasi yang dilindungi",
-		"didGenerateImage": "Roo telah menghasilkan gambar",
-		"wantsToCreate": "Roo ingin membuat file baru",
-		"wantsToSearchReplace": "Roo ingin mencari dan mengganti di file ini",
-		"didSearchReplace": "Roo melakukan pencarian dan penggantian pada file ini",
-		"wantsToInsert": "Roo ingin menyisipkan konten ke file ini",
-		"wantsToInsertWithLineNumber": "Roo ingin menyisipkan konten ke file ini di baris {{lineNumber}}",
-		"wantsToInsertAtEnd": "Roo ingin menambahkan konten ke akhir file ini"
+		"wantsToRead": "CodiDroid ingin membaca file ini",
+		"wantsToReadMultiple": "CodiDroid ingin membaca beberapa file",
+		"wantsToReadAndXMore": "CodiDroid ingin membaca file ini dan {{count}} lainnya",
+		"wantsToReadOutsideWorkspace": "CodiDroid ingin membaca file ini di luar workspace",
+		"didRead": "CodiDroid membaca file ini",
+		"wantsToEdit": "CodiDroid ingin mengedit file ini",
+		"wantsToEditOutsideWorkspace": "CodiDroid ingin mengedit file ini di luar workspace",
+		"wantsToEditProtected": "CodiDroid ingin mengedit file konfigurasi yang dilindungi",
+		"wantsToApplyBatchChanges": "CodiDroid ingin menerapkan perubahan ke beberapa file",
+		"wantsToGenerateImage": "CodiDroid ingin menghasilkan gambar",
+		"wantsToGenerateImageOutsideWorkspace": "CodiDroid ingin menghasilkan gambar di luar workspace",
+		"wantsToGenerateImageProtected": "CodiDroid ingin menghasilkan gambar di lokasi yang dilindungi",
+		"didGenerateImage": "CodiDroid telah menghasilkan gambar",
+		"wantsToCreate": "CodiDroid ingin membuat file baru",
+		"wantsToSearchReplace": "CodiDroid ingin mencari dan mengganti di file ini",
+		"didSearchReplace": "CodiDroid melakukan pencarian dan penggantian pada file ini",
+		"wantsToInsert": "CodiDroid ingin menyisipkan konten ke file ini",
+		"wantsToInsertWithLineNumber": "CodiDroid ingin menyisipkan konten ke file ini di baris {{lineNumber}}",
+		"wantsToInsertAtEnd": "CodiDroid ingin menambahkan konten ke akhir file ini"
 	},
 	"directoryOperations": {
-		"wantsToViewTopLevel": "Roo ingin melihat file tingkat atas di direktori ini",
-		"didViewTopLevel": "Roo melihat file tingkat atas di direktori ini",
-		"wantsToViewRecursive": "Roo ingin melihat semua file secara rekursif di direktori ini",
-		"didViewRecursive": "Roo melihat semua file secara rekursif di direktori ini",
-		"wantsToViewDefinitions": "Roo ingin melihat nama definisi source code yang digunakan di direktori ini",
-		"didViewDefinitions": "Roo melihat nama definisi source code yang digunakan di direktori ini",
-		"wantsToSearch": "Roo ingin mencari direktori ini untuk <code>{{regex}}</code>",
-		"didSearch": "Roo mencari direktori ini untuk <code>{{regex}}</code>",
-		"wantsToSearchOutsideWorkspace": "Roo ingin mencari direktori ini (di luar workspace) untuk <code>{{regex}}</code>",
-		"didSearchOutsideWorkspace": "Roo mencari direktori ini (di luar workspace) untuk <code>{{regex}}</code>",
-		"wantsToViewTopLevelOutsideWorkspace": "Roo ingin melihat file tingkat atas di direktori ini (di luar workspace)",
-		"didViewTopLevelOutsideWorkspace": "Roo melihat file tingkat atas di direktori ini (di luar workspace)",
-		"wantsToViewRecursiveOutsideWorkspace": "Roo ingin melihat semua file secara rekursif di direktori ini (di luar workspace)",
-		"didViewRecursiveOutsideWorkspace": "Roo melihat semua file secara rekursif di direktori ini (di luar workspace)",
-		"wantsToViewDefinitionsOutsideWorkspace": "Roo ingin melihat nama definisi source code yang digunakan di direktori ini (di luar workspace)",
-		"didViewDefinitionsOutsideWorkspace": "Roo melihat nama definisi source code yang digunakan di direktori ini (di luar workspace)"
+		"wantsToViewTopLevel": "CodiDroid ingin melihat file tingkat atas di direktori ini",
+		"didViewTopLevel": "CodiDroid melihat file tingkat atas di direktori ini",
+		"wantsToViewRecursive": "CodiDroid ingin melihat semua file secara rekursif di direktori ini",
+		"didViewRecursive": "CodiDroid melihat semua file secara rekursif di direktori ini",
+		"wantsToViewDefinitions": "CodiDroid ingin melihat nama definisi source code yang digunakan di direktori ini",
+		"didViewDefinitions": "CodiDroid melihat nama definisi source code yang digunakan di direktori ini",
+		"wantsToSearch": "CodiDroid ingin mencari direktori ini untuk <code>{{regex}}</code>",
+		"didSearch": "CodiDroid mencari direktori ini untuk <code>{{regex}}</code>",
+		"wantsToSearchOutsideWorkspace": "CodiDroid ingin mencari direktori ini (di luar workspace) untuk <code>{{regex}}</code>",
+		"didSearchOutsideWorkspace": "CodiDroid mencari direktori ini (di luar workspace) untuk <code>{{regex}}</code>",
+		"wantsToViewTopLevelOutsideWorkspace": "CodiDroid ingin melihat file tingkat atas di direktori ini (di luar workspace)",
+		"didViewTopLevelOutsideWorkspace": "CodiDroid melihat file tingkat atas di direktori ini (di luar workspace)",
+		"wantsToViewRecursiveOutsideWorkspace": "CodiDroid ingin melihat semua file secara rekursif di direktori ini (di luar workspace)",
+		"didViewRecursiveOutsideWorkspace": "CodiDroid melihat semua file secara rekursif di direktori ini (di luar workspace)",
+		"wantsToViewDefinitionsOutsideWorkspace": "CodiDroid ingin melihat nama definisi source code yang digunakan di direktori ini (di luar workspace)",
+		"didViewDefinitionsOutsideWorkspace": "CodiDroid melihat nama definisi source code yang digunakan di direktori ini (di luar workspace)"
 	},
 	"codebaseSearch": {
-		"wantsToSearch": "Roo ingin mencari codebase untuk <code>{{query}}</code>",
-		"wantsToSearchWithPath": "Roo ingin mencari codebase untuk <code>{{query}}</code> di <code>{{path}}</code>",
+		"wantsToSearch": "CodiDroid ingin mencari codebase untuk <code>{{query}}</code>",
+		"wantsToSearchWithPath": "CodiDroid ingin mencari codebase untuk <code>{{query}}</code> di <code>{{path}}</code>",
 		"didSearch_one": "Ditemukan 1 hasil",
 		"didSearch_other": "Ditemukan {{count}} hasil",
 		"resultTooltip": "Skor kemiripan: {{score}} (klik untuk membuka file)"
@@ -261,24 +261,24 @@
 	"response": "Respons",
 	"arguments": "Argumen",
 	"text": {
-		"rooSaid": "Roo berkata"
+		"rooSaid": "CodiDroid berkata"
 	},
 	"feedback": {
 		"youSaid": "Anda bilang"
 	},
 	"mcp": {
-		"wantsToUseTool": "Roo ingin menggunakan tool di server MCP {{serverName}}",
-		"wantsToAccessResource": "Roo ingin mengakses resource di server MCP {{serverName}}"
+		"wantsToUseTool": "CodiDroid ingin menggunakan tool di server MCP {{serverName}}",
+		"wantsToAccessResource": "CodiDroid ingin mengakses resource di server MCP {{serverName}}"
 	},
 	"modes": {
-		"wantsToSwitch": "Roo ingin beralih ke mode {{mode}}",
-		"wantsToSwitchWithReason": "Roo ingin beralih ke mode {{mode}} karena: {{reason}}",
-		"didSwitch": "Roo beralih ke mode {{mode}}",
-		"didSwitchWithReason": "Roo beralih ke mode {{mode}} karena: {{reason}}"
+		"wantsToSwitch": "CodiDroid ingin beralih ke mode {{mode}}",
+		"wantsToSwitchWithReason": "CodiDroid ingin beralih ke mode {{mode}} karena: {{reason}}",
+		"didSwitch": "CodiDroid beralih ke mode {{mode}}",
+		"didSwitchWithReason": "CodiDroid beralih ke mode {{mode}} karena: {{reason}}"
 	},
 	"subtasks": {
-		"wantsToCreate": "Roo ingin membuat subtugas baru dalam mode {{mode}}",
-		"wantsToFinish": "Roo ingin menyelesaikan subtugas ini",
+		"wantsToCreate": "CodiDroid ingin membuat subtugas baru dalam mode {{mode}}",
+		"wantsToFinish": "CodiDroid ingin menyelesaikan subtugas ini",
 		"newTaskContent": "Instruksi Subtugas",
 		"completionContent": "Subtugas Selesai",
 		"resultContent": "Hasil Subtugas",
@@ -286,14 +286,14 @@
 		"completionInstructions": "Subtugas selesai! Kamu bisa meninjau hasilnya dan menyarankan koreksi atau langkah selanjutnya. Jika semuanya terlihat baik, konfirmasi untuk mengembalikan hasil ke tugas induk."
 	},
 	"questions": {
-		"hasQuestion": "Roo punya pertanyaan"
+		"hasQuestion": "CodiDroid punya pertanyaan"
 	},
 	"taskCompleted": "Tugas Selesai",
 	"error": "Error",
 	"diffError": {
 		"title": "Edit Tidak Berhasil"
 	},
-	"troubleMessage": "Roo mengalami masalah...",
+	"troubleMessage": "CodiDroid mengalami masalah...",
 	"powershell": {
 		"issues": "Sepertinya kamu mengalami masalah Windows PowerShell, silakan lihat ini"
 	},
@@ -316,18 +316,18 @@
 		"triggerLabelAll": "YOLO"
 	},
 	"announcement": {
-		"title": "🎉 Roo Code {{version}} Dirilis",
+		"title": "🎉 CodiDroid {{version}} Dirilis",
 		"stealthModel": {
-			"feature": "<bold>Model stealth GRATIS waktu terbatas</bold> - Code Supernova: Sekarang diupgrade dengan <bold>jendela konteks 1M token</bold>! Model coding agentik serbaguna yang mendukung input gambar, tersedia melalui Roo Code Cloud.",
+			"feature": "<bold>Model stealth GRATIS waktu terbatas</bold> - Code Supernova: Sekarang diupgrade dengan <bold>jendela konteks 1M token</bold>! Model coding agentik serbaguna yang mendukung input gambar, tersedia melalui CodiDroid Cloud.",
 			"note": "(Catatan: prompt dan completion dicatat oleh pembuat model dan digunakan untuk meningkatkan model)",
-			"connectButton": "Hubungkan ke Roo Code Cloud",
-			"selectModel": "Pilih <code>roo/code-supernova</code> dari penyedia Roo Code Cloud di Pengaturan untuk memulai.",
+			"connectButton": "Hubungkan ke CodiDroid Cloud",
+			"selectModel": "Pilih <code>roo/code-supernova</code> dari penyedia CodiDroid Cloud di Pengaturan untuk memulai.",
 			"goToSettingsButton": "Pergi ke Pengaturan"
 		},
 		"release": {
 			"heading": "Terbaru:",
 			"contextRewind": "Kondensasi konteks yang ditingkatkan sekarang memungkinkan Anda mengembalikan konteks sebelumnya secara penuh saat memutar ulang ke checkpoint",
-			"rooProvider": "Penyedia Roo Code Cloud sekarang mempertahankan konten penalaran dan menggunakan alat asli secara default untuk kinerja yang lebih baik"
+			"rooProvider": "Penyedia CodiDroid Cloud sekarang mempertahankan konten penalaran dan menggunakan alat asli secara default untuk kinerja yang lebih baik"
 		},
 		"cloudAgents": {
 			"heading": "Baru di Cloud:",
@@ -349,7 +349,7 @@
 	},
 	"browser": {
 		"session": "Sesi Browser",
-		"rooWantsToUse": "Roo ingin menggunakan browser",
+		"rooWantsToUse": "CodiDroid ingin menggunakan browser",
 		"consoleLogs": "Log Konsol",
 		"noNewLogs": "(Tidak ada log baru)",
 		"screenshot": "Screenshot browser",
@@ -383,18 +383,18 @@
 	"profileViolationWarning": "Profil saat ini tidak kompatibel dengan pengaturan organisasi kamu",
 	"shellIntegration": {
 		"title": "Peringatan Eksekusi Perintah",
-		"description": "Perintah kamu dijalankan tanpa integrasi shell terminal VSCode. Untuk menekan peringatan ini kamu bisa menonaktifkan integrasi shell di bagian <strong>Terminal</strong> dari <settingsLink>pengaturan Roo Code</settingsLink> atau troubleshoot integrasi terminal VSCode menggunakan link di bawah.",
+		"description": "Perintah kamu dijalankan tanpa integrasi shell terminal VSCode. Untuk menekan peringatan ini kamu bisa menonaktifkan integrasi shell di bagian <strong>Terminal</strong> dari <settingsLink>pengaturan CodiDroid</settingsLink> atau troubleshoot integrasi terminal VSCode menggunakan link di bawah.",
 		"troubleshooting": "Klik di sini untuk dokumentasi integrasi shell."
 	},
 	"ask": {
 		"autoApprovedRequestLimitReached": {
 			"title": "Batas Permintaan yang Disetujui Otomatis Tercapai",
-			"description": "Roo telah mencapai batas {{count}} permintaan API yang disetujui otomatis. Apakah Anda ingin mengatur ulang hitungan dan melanjutkan tugas?",
+			"description": "CodiDroid telah mencapai batas {{count}} permintaan API yang disetujui otomatis. Apakah Anda ingin mengatur ulang hitungan dan melanjutkan tugas?",
 			"button": "Setel Ulang dan Lanjutkan"
 		},
 		"autoApprovedCostLimitReached": {
 			"title": "Batas Biaya yang Disetujui Otomatis Tercapai",
-			"description": "Roo telah mencapai batas biaya yang disetujui otomatis sebesar ${{count}}. Apakah Anda ingin mengatur ulang biaya dan melanjutkan tugas?",
+			"description": "CodiDroid telah mencapai batas biaya yang disetujui otomatis sebesar ${{count}}. Apakah Anda ingin mengatur ulang biaya dan melanjutkan tugas?",
 			"button": "Setel Ulang dan Lanjutkan"
 		}
 	},
@@ -409,7 +409,7 @@
 		"ariaLabel": "Versi {{version}} - Klik untuk melihat catatan rilis"
 	},
 	"rooCloudCTA": {
-		"title": "Roo Code Cloud sedang berkembang!",
+		"title": "CodiDroid Cloud sedang berkembang!",
 		"description": "Jalankan agen jarak jauh di cloud, akses tugas Anda dari mana saja, berkolaborasi dengan orang lain, dan banyak lagi.",
 		"joinWaitlist": "Daftar untuk mendapatkan pembaruan terbaru."
 	},
@@ -450,8 +450,8 @@
 		"clickToEdit": "Klik untuk mengedit pesan"
 	},
 	"slashCommand": {
-		"wantsToRun": "Roo ingin menjalankan perintah slash",
-		"didRun": "Roo telah menjalankan perintah slash"
+		"wantsToRun": "CodiDroid ingin menjalankan perintah slash",
+		"didRun": "CodiDroid telah menjalankan perintah slash"
 	},
 	"todo": {
 		"partial": "{{completed}} dari {{total}} to-do selesai",

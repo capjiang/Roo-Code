@@ -123,10 +123,10 @@ export async function activate(context: vscode.ExtensionContext) {
 		}
 	}
 
-	// Initialize the provider *before* the Roo Code Cloud service.
+	// Initialize the provider *before* the CodiDroid Cloud service.
 	const provider = new ClineProvider(context, outputChannel, "sidebar", contextProxy, mdmService)
 
-	// Initialize Roo Code Cloud service.
+	// Initialize CodiDroid Cloud service.
 	const postStateListener = () => ClineProvider.getVisibleInstance()?.postStateToWebview()
 
 	authStateChangedHandler = async (data: { state: AuthState; previousState: AuthState }) => {
@@ -149,13 +149,13 @@ export async function activate(context: vscode.ExtensionContext) {
 				await flushModels("roo", true)
 
 				if (data.state === "active-session") {
-					cloudLogger(`[authStateChangedHandler] Refreshed Roo models cache for active session`)
+					cloudLogger(`[authStateChangedHandler] Refreshed CodiDroid models cache for active session`)
 				} else {
-					cloudLogger(`[authStateChangedHandler] Flushed Roo models cache on logout`)
+					cloudLogger(`[authStateChangedHandler] Flushed CodiDroid models cache on logout`)
 				}
 			} catch (error) {
 				cloudLogger(
-					`[authStateChangedHandler] Failed to handle Roo models cache: ${error instanceof Error ? error.message : String(error)}`,
+					`[authStateChangedHandler] Failed to handle CodiDroid models cache: ${error instanceof Error ? error.message : String(error)}`,
 				)
 			}
 		}

@@ -1,10 +1,10 @@
 {
 	"input": {
-		"task_prompt": "Què vols que faci Roo?",
+		"task_prompt": "Què vols que faci CodiDroid?",
 		"task_placeholder": "Escriu la teva tasca aquí"
 	},
 	"extension": {
-		"name": "Roo Code",
+		"name": "CodiDroid",
 		"description": "Tot un equip de desenvolupadors d'IA al teu editor."
 	},
 	"number_format": {
@@ -95,7 +95,7 @@
 			"processExitedWithError": "El procés Claude Code ha sortit amb codi {{exitCode}}. Sortida d'error: {{output}}",
 			"stoppedWithReason": "Claude Code s'ha aturat per la raó: {{reason}}",
 			"apiKeyModelPlanMismatch": "Les claus API i els plans de subscripció permeten models diferents. Assegura't que el model seleccionat estigui inclòs al teu pla.",
-			"notFound": "No s'ha trobat l'executable Claude Code '{{claudePath}}'.\n\nInstal·la Claude Code CLI:\n1. Visita {{installationUrl}} per descarregar Claude Code\n2. Segueix les instruccions d'instal·lació per al teu sistema operatiu\n3. Assegura't que la comanda 'claude' estigui disponible al teu PATH\n4. Alternativament, configura una ruta personalitzada a la configuració de Roo sota 'Ruta de Claude Code'\n\nError original: {{originalError}}"
+			"notFound": "No s'ha trobat l'executable Claude Code '{{claudePath}}'.\n\nInstal·la Claude Code CLI:\n1. Visita {{installationUrl}} per descarregar Claude Code\n2. Segueix les instruccions d'instal·lació per al teu sistema operatiu\n3. Assegura't que la comanda 'claude' estigui disponible al teu PATH\n4. Alternativament, configura una ruta personalitzada a la configuració de CodiDroid sota 'Ruta de Claude Code'\n\nError original: {{originalError}}"
 		},
 		"message": {
 			"no_active_task_to_delete": "No hi ha cap tasca activa de la qual eliminar missatges",
@@ -121,7 +121,7 @@
 			"completionError": "Error de finalització de Cerebras: {{error}}"
 		},
 		"roo": {
-			"authenticationRequired": "El proveïdor Roo requereix autenticació al núvol. Si us plau, inicieu sessió a Roo Code Cloud."
+			"authenticationRequired": "El proveïdor CodiDroid requereix autenticació al núvol. Si us plau, inicieu sessió a CodiDroid Cloud."
 		},
 		"api": {
 			"invalidKeyInvalidChars": "La clau API conté caràcters no vàlids."
@@ -216,8 +216,8 @@
 	},
 	"mdm": {
 		"errors": {
-			"cloud_auth_required": "La teva organització requereix autenticació de Roo Code Cloud. Si us plau, inicia sessió per continuar.",
-			"organization_mismatch": "Has d'estar autenticat amb el compte de Roo Code Cloud de la teva organització.",
+			"cloud_auth_required": "La teva organització requereix autenticació de CodiDroid Cloud. Si us plau, inicia sessió per continuar.",
+			"organization_mismatch": "Has d'estar autenticat amb el compte de CodiDroid Cloud de la teva organització.",
 			"manual_url_empty": "Si us plau, introdueix una URL de callback vàlida",
 			"manual_url_no_query": "URL de callback no vàlida: falten paràmetres de consulta",
 			"manual_url_missing_params": "URL de callback no vàlida: falten paràmetres requerits (code i state)",

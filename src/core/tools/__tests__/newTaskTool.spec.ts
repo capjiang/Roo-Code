@@ -17,7 +17,7 @@ vi.mock("../../../shared/package", () => ({
 		name: "roo-cline",
 		publisher: "RooVeterinaryInc",
 		version: "1.0.0",
-		outputChannel: "Roo-Code",
+		outputChannel: "CodiDroid",
 	},
 }))
 

@@ -66,7 +66,7 @@ describe("RequestyHandler", () => {
 			apiKey: mockOptions.requestyApiKey,
 			defaultHeaders: {
 				"HTTP-Referer": "https://github.com/RooVetGit/Roo-Cline",
-				"X-Title": "Roo Code",
+				"X-Title": "CodiDroid",
 				"User-Agent": `RooCode/${Package.version}`,
 			},
 		})
@@ -81,7 +81,7 @@ describe("RequestyHandler", () => {
 			apiKey: mockOptions.requestyApiKey,
 			defaultHeaders: {
 				"HTTP-Referer": "https://github.com/RooVetGit/Roo-Cline",
-				"X-Title": "Roo Code",
+				"X-Title": "CodiDroid",
 				"User-Agent": `RooCode/${Package.version}`,
 			},
 		})
