@@ -20,9 +20,13 @@ export type SecurityAuditRunResult =
 			outputTail?: string
 	  }
 
-const OUT_DIR_SEGMENTS = [".roo", "secanalyzer"] as const
+const OUT_DIR_SEGMENTS = [".codi-droid", "secanalyzer"] as const
+const OUT_DIR_CONTAINER = `/input/${OUT_DIR_SEGMENTS.join("/")}` as const
+const OUT_DIR_CONTAINER_ALT = "/output" as const
 const PROJECT_NAME = "roo_security_audit" as const
 const SARIF_FILENAME = `${PROJECT_NAME}.sarif` as const
+const HISTORY_SUBDIR = "history" as const
+const MAX_HISTORY_RESULTS = 3 as const
 
 type CommandRunResult = {
 	exitCode: number | undefined
@@ -55,6 +59,42 @@ function toTail(text: string, maxChars: number): string {
 	return text.length > maxChars ? text.slice(-maxChars) : text
 }
 
+async function archivePreviousResults(sarifPath: string, historyDir: string): Promise<void> {
+	try {
+		await fs.access(sarifPath)
+	} catch {
+		return // Nothing to archive
+	}
+
+	await fs.mkdir(historyDir, { recursive: true })
+
+	const timestamp = new Date().toISOString().replace(/[:.]/g, "-")
+	const archivedPath = path.join(historyDir, `${PROJECT_NAME}-${timestamp}.sarif`)
+
+	await fs.rename(sarifPath, archivedPath)
+
+	const entries = await fs.readdir(historyDir)
+	const sarifFiles = await Promise.all(
+		entries
+			.filter((file) => file.endsWith(".sarif"))
+			.map(async (file) => {
+				const fullPath = path.join(historyDir, file)
+				const stats = await fs.stat(fullPath)
+				return { file, fullPath, mtime: stats.mtimeMs }
+			}),
+	)
+
+	sarifFiles.sort((a, b) => b.mtime - a.mtime)
+
+	await Promise.all(
+		sarifFiles.slice(MAX_HISTORY_RESULTS).map(({ fullPath }) =>
+			fs.rm(fullPath).catch(() => {
+				// Best effort cleanup; ignore failures to avoid blocking the audit run.
+			}),
+		),
+	)
+}
+
 export async function runSecurityAuditInWorkspace(task: Task): Promise<SecurityAuditRunResult> {
 	const workspace = task.cwd && task.cwd.trim() !== "" ? task.cwd : getWorkspacePath()
 	if (!workspace) {
@@ -66,6 +106,7 @@ export async function runSecurityAuditInWorkspace(task: Task): Promise<SecurityA
 
 	const outDir = path.join(workspace, ...OUT_DIR_SEGMENTS)
 	const sarifPath = path.join(outDir, SARIF_FILENAME)
+	const historyDir = path.join(outDir, HISTORY_SUBDIR)
 
 	let terminal: Awaited<ReturnType<typeof TerminalRegistry.getOrCreateTerminal>>
 	try {
@@ -148,20 +189,34 @@ export async function runSecurityAuditInWorkspace(task: Task): Promise<SecurityA
 		}
 	}
 
+	try {
+		await archivePreviousResults(sarifPath, historyDir)
+	} catch (error) {
+		return {
+			status: "failed",
+			workspace,
+			sarifPath,
+			message: `Security audit could not archive previous results.\n\nError: ${(error as Error)?.message ?? String(error)}`,
+		}
+	}
+
 	const command =
 		runner === "local"
 			? `secanalyzer.sh "${workspace}" --outFormat=sarif --outPath="${outDir}" --project=${PROJECT_NAME}`
 			: (() => {
 					const userFlag = `--user "$(id -u)":"$(id -g)" `
 					const inputMount = `-v "${workspace}":/input:ro`
-					const outputMount = `-v "${outDir}":/output`
+					// Overlay the audit output directory inside the (otherwise read-only) workspace mount
+					const outputOverlayMount = `-v "${outDir}":${OUT_DIR_CONTAINER}`
+					// Some secanalyzer flows still write to /output; mount the same host dir there too.
+					const outputCompatMount = `-v "${outDir}":${OUT_DIR_CONTAINER_ALT}`
 
 					return (
 						`docker run --rm ` +
 						userFlag +
-						`${inputMount} ${outputMount} ` +
+						`${inputMount} ${outputOverlayMount} ${outputCompatMount} ` +
 						`secanalyzer:local ` +
-						`/input --project=${PROJECT_NAME} --outFormat=sarif --outPath=/output`
+						`/input --project=${PROJECT_NAME} --outFormat=sarif --outPath=${OUT_DIR_CONTAINER}`
 					)
 				})()
 

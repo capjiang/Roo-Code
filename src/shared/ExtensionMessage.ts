@@ -307,7 +307,7 @@ export type ExtensionState = Pick<
 		status: "success" | "failed"
 		/**
 		 * Workspace-relative path (prefixed with "./") suitable for use in prompts and file links.
-		 * Example: "./.roo/secanalyzer/roo_security_audit.sarif"
+		 * Example: "./.codi-droid/secanalyzer/roo_security_audit.sarif"
 		 */
 		sarifHref?: string
 		ranAt?: number
